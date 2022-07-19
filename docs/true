@@ -2,19 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
+		<link rel="icon" href="/portfolio/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/_app/immutable/start-9c942e8d.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-b32ab915.js">
+	<link rel="modulepreload" href="/portfolio/_app/immutable/start-afc5c69d.js">
+	<link rel="modulepreload" href="/portfolio/_app/immutable/chunks/index-b32ab915.js">
 	</head>
 	<body>
 		<div>
 		<script type="module" data-sveltekit-hydrate="45h">
-		import { start } from "/_app/immutable/start-9c942e8d.js";
+		import { start } from "/portfolio/_app/immutable/start-afc5c69d.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-			paths: {"base":"","assets":""},
+			paths: {"base":"/portfolio","assets":"/portfolio"},
 			session: {},
 			route: true,
 			spa: true,
