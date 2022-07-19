@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@neodrag/svelte": "^1.2.3"
+		"@neodrag/svelte": "^1.2.3",
+		"cross-env": "^7.0.3"
 	}
 }
