@@ -11,11 +11,7 @@
     $: selectedYear = years[Math.floor((offsetX + 80) / trackWidth * 8) - 1];
 
     const yearsText = [
-        "In 2015 I blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah..<br/>\
-        blah blah blah blah blah blah blah.<br/>\
-        blah blah blah blah blah blah blah.<br/>\
-        blah blah blah blah blah blah blah.<br/>\
-        blah blah blah blah blah blah blah.<br/>",
+        "In 2015 I joined the IDF. After basic training I went on a Computer Network course in Basmach, the IDF School for Computer Professions.",
         "In 2016 I...",
     ]
 </script>
