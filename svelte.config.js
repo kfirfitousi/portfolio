@@ -16,14 +16,17 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'docs',
-			assets: 'docs'
+			assets: 'docs',
+			fallback: null,
+            precompress: false
 		}),
 		paths: {
 			base: dev ? '' : '/portfolio',
 		},
 		prerender: {
 			default: true
-		}
+		},
+		trailingSlash: 'always'
 	}
 };
 
