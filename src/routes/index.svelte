@@ -20,6 +20,10 @@
     ]
 </script>
 
+<head>
+    <title>Kfir Fitousi | Front End Developer</title>
+</head>
+
 <div class="conatiner max-w-2xl m-auto px-4">
     <img 
         src="/kfir.jpg" 
