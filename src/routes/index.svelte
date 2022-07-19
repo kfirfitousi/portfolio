@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths'
     import Slider from '$lib/components/slider.svelte';
     import ProjectCard from '$lib/components/projectCard.svelte';
     import LinkedIn from '$lib/icons/linkedin.svelte';
@@ -26,7 +27,7 @@
 
 <div class="conatiner max-w-2xl m-auto px-4">
     <img 
-        src="/kfir.jpg"
+        src="{base}/kfir.jpg"
         alt="Kfir Fitousi" 
         class="pic p-0.5 w-40 h-40 mx-auto mt-6 border-2 border-t-[#d27884] border-x-zinc-800 border-b-[#3271aa] rounded-full mb-2" 
     />
@@ -78,7 +79,7 @@
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
             summary="Built with TypeScript, Next.js and TailwindCSS."
-            image="/pasta-quiz.png"
+            image="{base}/pasta-quiz.png"
             link="https://pasta-quiz.vercel.app"
             github="https://github.com/kp2c/pasta-quiz" 
         />
@@ -86,7 +87,7 @@
             title="WHILE Compiler"
             subtitle="Online interpreter and compiler for a programming language called WHILE."
             summary="Built with SvelteKit, TypeScript and TailwindCSS."
-            image="/while-compiler.png"
+            image="{base}/while-compiler.png"
             link="https://while-compiler.vercel.app"
             github="https://github.com/kp2c/while-compiler" 
         />
@@ -94,7 +95,7 @@
             title="Arous Elbahar Style"
             subtitle="Second-hand store website for Arous Elbahar, a non-profit organization."
             summary="Built with Shopify. Not yet available."
-            image="/arous-style.png"
+            image="{base}/arous-style.png"
         />
     </div>
 </div>
