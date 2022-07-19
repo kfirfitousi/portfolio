@@ -10,7 +10,7 @@
 <div class="rounded-lg">
     <p class="h-8 leading-8 text-lg text-center bg-rose-800 text-rose-50 rounded-t-lg">{title}</p>
     <div class="flex flex-col sm:flex-row">
-        <img src="/{image}" alt={title} class="h-full aspect-square sm:h-[22rem] rounded-bl-none sm:rounded-bl-lg" />
+        <img src="{image}" alt={title} class="h-full aspect-square sm:h-[22rem] rounded-bl-none sm:rounded-bl-lg" />
         <div class="flex flex-col justify-center w-full p-2 sm:w-1/2 bg-rose-50 text-zinc-800 border-rose-800 border-t sm:border-l sm:border-t-0 rounded-b-lg sm:rounded-bl-none">
             <p class="text-lg text-center">{subtitle}</p>
             <p class="text-center mb-2">{summary}</p>
