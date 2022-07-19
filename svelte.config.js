@@ -1,4 +1,4 @@
-import adapter from 'svelte-adapter-github';
+import adapter from "@sveltejs/adapter-static"; 
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,10 +15,7 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
-			domain: null,
-			jekyll: false,
-			fallback: null,
-			precompress: false
+			fallback: true
 		})
 	}
 };
