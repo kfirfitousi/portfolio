@@ -102,7 +102,7 @@
             subtitle="Put your pasta knowledge to the test!"
             summary="Built with TypeScript, Next.js and TailwindCSS."
             image="/pasta-quiz.webp"
-            link="https://pasta-quiz.vercel.app"
+            link="https://pasta-quiz.kfirfitousi.com"
             github="https://github.com/kp2c/pasta-quiz" 
         />
         <ProjectCard 
@@ -110,7 +110,7 @@
             subtitle="Online interpreter and compiler for a programming language called WHILE."
             summary="Built with TypeScript, SvelteKit and TailwindCSS."
             image="/while-compiler.webp"
-            link="https://while-compiler.vercel.app"
+            link="https://while-compiler.kfirfitousi.com"
             github="https://github.com/kp2c/while-compiler" 
         />
         <ProjectCard 
