@@ -3,18 +3,20 @@
 
     export let offsetX = 0;
     export let trackWidth;
+    let windowWidth: number;
+
     $: position = {
         x: offsetX,
         y: 0
     };
+
+    $: {
+        offsetX = 0;
+        windowWidth = windowWidth;
+    }
 </script>
 
-<svelte:window 
-  on:resize={() => {
-    offsetX = 0;
-  }}
-/>
-
+<svelte:window bind:innerWidth={windowWidth} />
 
 <div bind:clientWidth={trackWidth} class="flex items-end w-full h-2 md:h-3 bg-gray-600 mx-auto rounded-t-lg select-none">
     <div class="w-16 h-6 mb-0.5 md:w-20 md:h-8 md:mb-0 bg-[url(/car.webp)] bg-cover bg-no-repeat"
