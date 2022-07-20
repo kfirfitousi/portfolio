@@ -88,7 +88,7 @@
 
     <h1 class="text-3xl text-zinc-200 text-center mt-10">Projects</h1>
 
-    <div class="flex flex-wrap justify-center space-y-3 mt-4">
+    <div class="flex flex-wrap justify-center space-y-3 my-4">
         <ProjectCard 
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
