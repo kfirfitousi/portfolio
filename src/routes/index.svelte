@@ -93,7 +93,7 @@
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
             summary="Built with TypeScript, Next.js and TailwindCSS."
-            image="/pasta-quiz.png"
+            image="/pasta-quiz.webp"
             link="https://pasta-quiz.vercel.app"
             github="https://github.com/kp2c/pasta-quiz" 
         />
@@ -101,7 +101,7 @@
             title="WHILE Compiler"
             subtitle="Online interpreter and compiler for a programming language called WHILE."
             summary="Built with TypeScript, SvelteKit and TailwindCSS."
-            image="/while-compiler.png"
+            image="/while-compiler.webp"
             link="https://while-compiler.vercel.app"
             github="https://github.com/kp2c/while-compiler" 
         />
@@ -109,7 +109,7 @@
             title="Arous Elbahar Style"
             subtitle="Second-hand store website for Arous Elbahar, a non-profit organization."
             summary="Built with Shopify. Not yet available."
-            image="/arous-style.png"
+            image="/arous-style.webp"
         />
     </div>
 </div>
