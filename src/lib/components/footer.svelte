@@ -1,4 +1,4 @@
-<footer class="contatiner w-full lg:w-2/3 xl:w-1/2 mx-auto mt-auto mb-3 px-6">
+<footer class="contatiner w-full lg:w-2/3 xl:w-1/2 mx-auto mt-auto pb-4 px-6">
 	<div class="flex flex-col text-center text-zinc-300">
 		<div class="flex flex-row flex-wrap md:flex-nowrap justify-center items-center mx-auto my-2">
 			<span class="mb-2 md:mr-3 md:mb-0 w-full md:w-auto">Built with</span>
