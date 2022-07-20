@@ -110,7 +110,7 @@
             subtitle="Online interpreter and compiler for a programming language called WHILE."
             summary="Built with TypeScript, SvelteKit and TailwindCSS."
             image="/while-compiler.webp"
-            link="https://while-compiler.kfirfitousi.com"
+            link="https://while.kfirfitousi.com"
             github="https://github.com/kp2c/while-compiler" 
         />
         <ProjectCard 
