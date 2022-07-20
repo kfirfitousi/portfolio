@@ -1,18 +1,19 @@
+<script context="module" lang="ts">
+    import type { Load } from '@sveltejs/kit';
+
+    export const load: Load = async ({ fetch }) => {
+        const response = await fetch('/quote');
+        const { quote } = await response.json();
+        return {
+            props: {
+                quote
+            }
+        }
+    }
+</script>
+
 <script lang="ts">
-    import { onMount } from 'svelte';
-
-    let quote: string;
-    const quotes = [
-        "Well, pitter patter, let's get at 'er.",
-        "Look if you are coming, you better come correct.",
-        "Not my pig, not my farm.",
-        "Hard no.",
-        "And I suggest you let that one marinate."
-    ];
-
-    onMount(() => {
-        quote = quotes[Math.floor(Math.random() * quotes.length)]
-    })
+    export let quote: string;
 </script>
 
 <p class="text-8xl text-center text-zinc-200 mt-10 mb-4">404</p>
