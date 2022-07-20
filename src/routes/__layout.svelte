@@ -3,6 +3,7 @@
 	import Footer from '$lib/components/footer.svelte';
 </script>
 
-<slot />
-
-<Footer />
+<div class="flex flex-col h-screen">
+	<slot />
+	<Footer />
+</div>
