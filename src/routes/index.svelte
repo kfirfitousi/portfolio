@@ -87,7 +87,7 @@
         {selectedYear}
     </p>
 
-    <Slider bind:offsetX bind:trackWidth car="/car.webp" />
+    <Slider bind:offsetX bind:trackWidth />
 
     <div class="w-full bg-zinc-50 pt-1 rounded-b-lg">
         <p class="text-sm text-center text-gray-600">
