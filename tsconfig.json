@@ -16,7 +16,10 @@
 			],
 			"$lib/*": [
 				"src/lib/*"
-			],
+			]
 		}
-	}
+	},
+	"exclude": [
+		"src/stories"
+	]
 }
