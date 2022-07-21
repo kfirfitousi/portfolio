@@ -7,7 +7,7 @@
     export let github: string = "";
 </script>
 
-<div class="rounded-lg">
+<div class="rounded-lg max-w-2xl">
     <p class="h-8 leading-8 text-lg text-center bg-pink-900 text-zinc-50 rounded-t-lg">{title}</p>
     <div class="flex flex-col sm:flex-row">
         <img src={image} alt={title} class="h-full aspect-square sm:h-[22rem] rounded-bl-none sm:rounded-bl-lg" loading="lazy" />
