@@ -1,6 +1,7 @@
 <script>
     import Slider from '$lib/components/slider.svelte';
     import ProjectCard from '$lib/components/projectCard.svelte';
+    import IconWithTooltip from '$lib/components/iconWithTooltip.svelte';
     import LinkedIn from '$lib/icons/linkedin.svelte';
     import GitHub from '$lib/icons/github.svelte';
     import Email from '$lib/icons/email.svelte';
@@ -70,15 +71,21 @@
     <h2 class="text-lg text-zinc-200 text-center mb-2">Front End Developer</h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-6">
-        <a href="https://www.linkedin.com/in/kfirp/" target="_blank">
-            <LinkedIn />
-        </a>
-        <a href="https://github.com/kp2c" target="_blank">
-            <GitHub />
-        </a>
-        <a href="mailto:kfirp84@gmail.com" target="_blank">
-            <Email />
-        </a>
+        <IconWithTooltip 
+            tip="My profile on LinkedIn"
+            link="https://www.linkedin.com/in/kfirp"
+            Icon={LinkedIn} 
+        />
+        <IconWithTooltip 
+            tip="My profile on GitHub"
+            link="https://github.com/kp2c"
+            Icon={GitHub}
+        />
+        <IconWithTooltip 
+            tip="My Email"
+            link="mailto:kfirp84@gmail.com"
+            Icon={Email}
+        />
     </div>
 
     <p class="w-10 md:w-14 h-5 mx-3 mb-3.5 text-xs md:text-base leading-5 md:leading-5 bg-pink-900 text-zinc-50 text-center rounded-lg select-none"
