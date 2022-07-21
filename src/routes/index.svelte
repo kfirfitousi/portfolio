@@ -3,6 +3,7 @@
     import ProjectCard from '$lib/components/projectCard.svelte';
     import LinkedIn from '$lib/icons/linkedin.svelte';
     import GitHub from '$lib/icons/github.svelte';
+    import Email from '$lib/icons/email.svelte';
 
     let showWave = false;
     let offsetX = 0;
@@ -74,6 +75,9 @@
         </a>
         <a href="https://github.com/kp2c" target="_blank">
             <GitHub />
+        </a>
+        <a href="mailto:kfirp84@gmail.com" target="_blank">
+            <Email />
         </a>
     </div>
 
