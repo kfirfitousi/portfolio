@@ -44,16 +44,9 @@
     <title>Kfir Fitousi | Front End Developer</title>
 </head>
 
-<div class="conatiner max-w-2xl m-auto px-4">
-    
-    <div>
-        <img 
-            src="/kfir.jpg"
-            alt="Kfir Fitousi" 
-            class="p-1 w-40 h-40 mx-auto mt-6 rounded-full" 
-        />
-        <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
-    </div>
+<main class="conatiner max-w-2xl m-auto px-4">
+    <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto mt-6 rounded-full" />
+    <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
 
     <div class="flex flex-row justify-center mt-2">
         <h1 class="text-3xl text-zinc-200 text-center"
@@ -131,7 +124,7 @@
             image="/arous-style.webp"
         />
     </div>
-</div>
+</main>
 
 <style>
     .pic-border {
