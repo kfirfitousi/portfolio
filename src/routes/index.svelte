@@ -2,7 +2,7 @@
     import IconWithTooltip from '$lib/components/IconWithTooltip';
     import Timeline from '$lib/components/Timeline';
     import ProjectCard from '$lib/components/ProjectCard';
-    import { LinkedIn, GitHub, Email} from '$lib/components/Icons';
+    import { LinkedIn, GitHub, Email } from '$lib/components/Icons';
     import { years, yearsText } from '$lib/data/timeline.json';
 
     let showWave = false;
@@ -50,10 +50,9 @@
     </div>
 
     <Timeline years={years} yearsText={yearsText} />
-
-    <h1 class="text-3xl text-zinc-200 text-center mt-10">Projects</h1>
-
-    <div class="flex flex-wrap justify-center space-y-3 my-4">
+    
+    <section class="flex flex-wrap justify-center space-y-3 mt-12 mb-4">
+        <h1 class="text-3xl text-zinc-200 text-center mb-1">Projects</h1>
         <ProjectCard 
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
@@ -76,7 +75,7 @@
             summary="Built with Shopify. Not yet available."
             image="/arous-style.webp"
         />
-    </div>
+    </section>
 </main>
 
 <style>

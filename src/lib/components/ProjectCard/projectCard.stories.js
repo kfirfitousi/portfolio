@@ -1,5 +1,5 @@
-import ProjectCard from './ProjectCard.svelte'
-import '/src/app.css'
+import ProjectCard from './ProjectCard.svelte';
+import '/src/app.css';
 
 export default {
     title: 'Project Card',
@@ -23,4 +23,4 @@ export const WithLinks = Template.bind({});
 WithLinks.args = {
     link: "https://pasta-quiz.kfirfitousi.com",
     github: "https://github.com/kp2c/pasta-quiz",
-}
+};

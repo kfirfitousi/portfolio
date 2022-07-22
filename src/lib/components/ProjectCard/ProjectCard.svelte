@@ -7,8 +7,8 @@
     export let github: string = "";
 </script>
 
-<div class="rounded-lg max-w-2xl">
-    <p class="h-8 leading-8 text-lg text-center bg-pink-900 text-zinc-50 rounded-t-lg">{title}</p>
+<article class="rounded-lg max-w-2xl">
+    <h1 class="h-8 leading-8 text-lg text-center bg-pink-900 text-zinc-50 rounded-t-lg">{title}</h1>
     <div class="flex flex-col sm:flex-row">
         <img src={image} alt={title} class="h-full aspect-square sm:h-[22rem] rounded-bl-none sm:rounded-bl-lg" loading="lazy" />
         <div class="flex flex-col justify-center w-full p-2 sm:w-1/2 bg-zinc-50 text-pink-900 border-pink-100 border-t sm:border-l sm:border-t-0 rounded-b-lg sm:rounded-bl-none">
@@ -28,4 +28,4 @@
             </p>
         </div>
     </div>
-</div>
+</article>
