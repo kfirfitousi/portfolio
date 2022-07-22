@@ -10,4 +10,5 @@ declare namespace App {
 	// interface Stuff {}
 }
 
-declare module 'svelte-tooltip'
+declare module 'svelte-tooltip';
+declare module '@beyonk/svelte-google-analytics';

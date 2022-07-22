@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
+    "@beyonk/svelte-google-analytics": "^2.6.4",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -51,7 +52,7 @@
   },
   "type": "module",
   "dependencies": {
-    "svelte-tooltip": "^1.2.0",
-    "@neodrag/svelte": "^1.2.3"
+    "@neodrag/svelte": "^1.2.3",
+    "svelte-tooltip": "^1.2.0"
   }
 }

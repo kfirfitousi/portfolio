@@ -12,8 +12,8 @@
     <title>Kfir Fitousi | Front End Developer</title>
 </head>
 
-<main class="conatiner max-w-2xl m-auto px-4">
-    <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto mt-6 rounded-full" />
+<main class="conatiner max-w-2xl mx-auto px-4">
+    <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
     <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
 
     <div class="flex flex-row justify-center mt-2">
@@ -51,7 +51,7 @@
 
     <Timeline years={years} yearsText={yearsText} />
     
-    <section class="flex flex-wrap justify-center space-y-3 mt-12 mb-4">
+    <section class="flex flex-wrap justify-center space-y-3 mt-12">
         <h1 class="text-3xl text-zinc-200 text-center mb-1">Projects</h1>
         <ProjectCard 
             title="Pasta Quiz"

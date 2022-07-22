@@ -9,7 +9,10 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"types": ["@neodrag/svelte/globals", "svelte"],
+		"types": [
+			"svelte",
+			"@neodrag/svelte/globals"
+		],
 		"paths": {
 			"$src": [
 				"src"
