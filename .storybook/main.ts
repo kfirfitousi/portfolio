@@ -21,6 +21,13 @@ const config = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  async viteFinal(config) {
+    config.resolve.alias = {
+      $lib: '/src/lib',
+    };
+
+    return config;
   }
 }
 
