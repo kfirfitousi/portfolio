@@ -8,7 +8,7 @@
 
 <div class="text-zinc-200 text-xs">
     <SvelteTooltip tip={tip} color="#831843" bottom>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" aria-label={tip}>
             <svelte:component this={icon} />
         </a>
     </SvelteTooltip>
