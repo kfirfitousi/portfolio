@@ -30,7 +30,7 @@
     </h1>
     <h2 class="text-lg text-zinc-200 text-center mb-2">Front End Developer</h2>
 
-    <div class="flex flex-row justify-center space-x-3 mb-6">
+    <div class="flex flex-row justify-center space-x-3 mb-10">
         <IconWithTooltip 
             tip="My profile on LinkedIn"
             link="https://www.linkedin.com/in/kfirp"

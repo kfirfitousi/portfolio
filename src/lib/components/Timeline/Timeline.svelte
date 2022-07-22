@@ -10,7 +10,12 @@
     export let years: number[];
     export let yearsText: string[];
 
-    $: selectedYear = years[Math.round((offsetX + carWidth*1.1) / trackWidth * years.length) - 1];
+    $: selectedYear = years[
+        Math.min(
+            Math.max(Math.floor((offsetX + carWidth) / trackWidth * years.length) - 1, 0), 
+            years.length - 1
+        )
+    ];
     
     $: position = {
         x: offsetX,
@@ -29,37 +34,26 @@
         if (document.getElementById("slider") === document.activeElement) {
             if (e.key === "ArrowRight" || e.key === "ArrowUp") {
                 e.preventDefault();
-                offsetX = Math.min(offsetX + carWidth, trackWidth - carWidth);
+                offsetX = Math.min(offsetX + (trackWidth / years.length), trackWidth - carWidth);
             } else if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
                 e.preventDefault();
-                offsetX = Math.max(offsetX - carWidth, 0);
+                offsetX = Math.max(offsetX - (trackWidth / years.length), 0);
             }
         }
     }}
 />
 
 <section aria-label="Timeline">
-    <div 
-        class="
-            w-10 md:w-14 h-5 mx-3 mb-3.5 text-xs md:text-base leading-5 md:leading-5 
-            bg-pink-900 text-zinc-50 text-center rounded-lg select-none
-        "
-        style="transform: translateX({ offsetX }px)"
-        aria-label="Year"
-    >
-        {selectedYear}
-    </div>
-    
     <div bind:clientWidth={trackWidth} class="flex items-end w-full h-2 md:h-3 bg-gray-600 mx-auto rounded-t-lg select-none">
         <button 
-            class="w-16 h-6 mb-0.5 md:w-20 md:h-8 md:mb-0 bg-cover bg-no-repeat"
+            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-cover bg-no-repeat"
             style="background-image: url({ car })"
             id="slider" 
             role="slider"
             aria-valuemin={years[0]}
             aria-valuemax={years[years.length - 1]}
             aria-valuenow={selectedYear}
-            aria-label="Racecar slider"
+            aria-label="Racecar Slider"
             aria-keyshortcuts="ArrowLeft ArrowRight"
             aria-controls="Year Text"
             bind:clientWidth={carWidth} 
@@ -74,13 +68,27 @@
         />
     </div>
     
-    <div class="w-full bg-zinc-50 pt-1 rounded-b-lg" aria-label="Year Text">
+    <div class="w-full bg-zinc-50 rounded-b-lg">
+        <div 
+            class="
+                w-16 md:w-20 mb-0.5 py-0.5 text-xs md:text-base leading-5 md:leading-5 
+                bg-pink-900 text-zinc-50 text-center select-none
+            "
+            class:rounded-bl-lg={offsetX !== 0}
+            class:rounded-br-lg={offsetX !== trackWidth - carWidth}
+            style="transform: translateX({ offsetX }px)"
+            aria-label="Year"
+        >
+            {selectedYear}
+        </div>
+
         <label for="slider">
             <p class="text-sm text-center text-gray-600">
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>
-        <p class="py-4 px-8 text-zinc-800">
+        
+        <p class="py-4 px-8 text-zinc-800" aria-label="Year Text">
             {@html yearsText[selectedYear - years[0]]}
         </p>
     </div>
