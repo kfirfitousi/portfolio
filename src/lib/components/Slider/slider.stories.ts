@@ -1,5 +1,5 @@
-import Slider from '../lib/components/slider.svelte'
-import '../app.css'
+import Slider from './Slider.svelte';
+import '$src/app.css';
 
 export default {
     title: "Slider",

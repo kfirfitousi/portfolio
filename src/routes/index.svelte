@@ -1,10 +1,8 @@
 <script>
-    import Slider from '$lib/components/slider.svelte';
-    import ProjectCard from '$lib/components/projectCard.svelte';
-    import IconWithTooltip from '$lib/components/iconWithTooltip.svelte';
-    import LinkedIn from '$lib/icons/linkedin.svelte';
-    import GitHub from '$lib/icons/github.svelte';
-    import Email from '$lib/icons/email.svelte';
+    import { Slider } from '$src/lib/components/Slider';
+    import { ProjectCard } from '$src/lib/components/ProjectCard';
+    import { IconWithTooltip } from '$lib/components/IconWithTooltip';
+    import { LinkedIn, GitHub, Email} from '$lib/icons';
 
     let showWave = false;
     let offsetX = 0;
@@ -67,17 +65,17 @@
         <IconWithTooltip 
             tip="My profile on LinkedIn"
             link="https://www.linkedin.com/in/kfirp"
-            Icon={LinkedIn} 
+            icon={LinkedIn} 
         />
         <IconWithTooltip 
             tip="My profile on GitHub"
             link="https://github.com/kp2c"
-            Icon={GitHub}
+            icon={GitHub}
         />
         <IconWithTooltip 
             tip="My Email"
             link="mailto:kfirp84@gmail.com"
-            Icon={Email}
+            icon={Email}
         />
     </div>
 

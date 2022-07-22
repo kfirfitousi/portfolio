@@ -9,8 +9,14 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"types": ["@neodrag/svelte/globals"],
+		"types": ["@neodrag/svelte/globals", "svelte"],
 		"paths": {
+			"$src": [
+				"src"
+			],
+			"$src/*": [
+				"src/*"
+			],
 			"$lib": [
 				"src/lib"
 			],
@@ -20,6 +26,6 @@
 		}
 	},
 	"exclude": [
-		"src/stories"
+		"**/*.stories.js"
 	]
 }

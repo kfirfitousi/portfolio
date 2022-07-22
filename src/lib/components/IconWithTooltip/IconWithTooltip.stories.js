@@ -1,8 +1,6 @@
-import IconWithTooltip from '../lib/components/iconWithTooltip.svelte'
-import LinkedIn from '../lib/icons/linkedin.svelte'
-import GitHub from '../lib/icons/github.svelte'
-import Email from '../lib/icons/email.svelte'
-import '../app.css'
+import IconWithTooltip from './IconWithTooltip.svelte';
+import { LinkedIn, GitHub, Email} from '$lib/icons'
+import '/src/app.css'
 
 export default {
     title: "Icon with Tooltip",
@@ -18,7 +16,7 @@ export const LinkedinIcon = Template.bind({});
 LinkedinIcon.args = {
     tip: "My profile on LinkedIn",
     link: "https://www.linkedin.com/in/kfirp",
-    Icon: LinkedIn
+    icon: LinkedIn
 }
 
 export const GithubIcon = Template.bind({});

@@ -1,5 +1,5 @@
-import Footer from '../lib/components/footer.svelte';
-import '../app.css'
+import Footer from './Footer.svelte';
+import '$src/app.css'
 
 export default {
     title: 'Footer',
