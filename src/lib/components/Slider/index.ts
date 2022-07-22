@@ -1,1 +1,1 @@
-export { default as Slider } from './Slider.svelte';
+export { default as default } from './Slider.svelte';

@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard.svelte'
-import '$src/app.css'
+import '/src/app.css'
 
 export default {
     title: 'Project Card',

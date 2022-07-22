@@ -1,1 +1,1 @@
-export { default as IconWithTooltip } from './IconWithTooltip.svelte';
+export { default as default } from './IconWithTooltip.svelte';
