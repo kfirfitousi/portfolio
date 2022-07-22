@@ -17,13 +17,21 @@
             <p class="text-center mb-2">{summary}</p>
             <p class="flex flex-row mx-auto mb-2 sm:mb-0 space-x-2"> 
                 {#if link}
-                <button class="w-16 text-lg hover:bg-pink-900 text-pink-900 hover:text-zinc-50 border border-pink-900 rounded">
-                    <a href={link} target="_blank" alt={title}>Link</a>
+                <button 
+                    href={link} target="_blank"
+                    alt={title}
+                    class="w-16 text-lg hover:bg-pink-900 text-pink-900 hover:text-zinc-50 border border-pink-900 rounded"
+                >
+                    Link
                 </button>
                 {/if}
                 {#if github}
-                <button class="w-16 text-lg hover:bg-pink-900 text-pink-900 hover:text-zinc-50 border border-pink-900 rounded">
-                    <a href={github} target="_blank" alt="{title} on GitHub">Code</a>
+                <button 
+                    href={github} target="_blank" 
+                    alt="{title} on GitHub" 
+                    class="w-16 text-lg hover:bg-pink-900 text-pink-900 hover:text-zinc-50 border border-pink-900 rounded"
+                >
+                    Code
                 </button>
                 {/if}
             </p>

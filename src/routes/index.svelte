@@ -16,19 +16,18 @@
     <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
     <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
 
-    <div class="flex flex-row justify-center mt-2">
-        <h1 class="text-3xl text-zinc-200 text-center"
-            on:mouseover={() => showWave = true}
-            on:focus={() => showWave = true}
-            on:mouseout={() => showWave = false}
-            on:blur={() => showWave = false}
-        >
-            Kfir Fitousi
-            {#if showWave}
-                <span class="wave text-3xl absolute">&nbsp;&#128075;</span>
-            {/if}
-        </h1>
-    </div>
+    <h1
+        class="text-3xl text-zinc-200 text-center mt-2"
+        on:mouseover={() => showWave = true}
+        on:focus={() => showWave = true}
+        on:mouseout={() => showWave = false}
+        on:blur={() => showWave = false}
+    >
+        Kfir Fitousi
+        {#if showWave}
+            <span class="wave text-3xl absolute">&nbsp;&#128075;</span>
+        {/if}
+    </h1>
     <h2 class="text-lg text-zinc-200 text-center mb-2">Front End Developer</h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-6">

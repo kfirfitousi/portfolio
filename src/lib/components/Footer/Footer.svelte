@@ -9,7 +9,7 @@
 		</div>
 		<span>
 			Source code available on
-			<a href="https://github.com/kp2c/portfolio"  class="underline text-pink-600" target="_blank">GitHub</a>.
+			<a href="https://github.com/kp2c/portfolio" class="underline text-pink-600" target="_blank">GitHub</a>.
 		</span>
 		<span>
 			Icons by <a href="https://icons8.com" class="underline text-pink-600" target="_blank">Icons8</a>.
