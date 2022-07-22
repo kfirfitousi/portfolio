@@ -59,7 +59,8 @@
             summary="Built with TypeScript, Next.js and TailwindCSS."
             image="/pasta-quiz.webp"
             link="https://pasta-quiz.kfirfitousi.com"
-            github="https://github.com/kp2c/pasta-quiz" 
+            github="https://github.com/kp2c/pasta-quiz"
+            lazyImage={false}
         />
         <ProjectCard 
             title="WHILE Compiler"
