@@ -54,7 +54,8 @@
             aria-valuemax={years[years.length - 1]}
             aria-valuenow={selectedYear}
             aria-label="Racecar Slider"
-            aria-controls="Year Text"
+            aria-controls="yeat-text"
+            aria-keyshortcuts="ArrowLeft ArrowUp ArrowRight ArrowDown"
             bind:clientWidth={carWidth} 
             use:draggable={{
                 axis: 'x',
@@ -87,7 +88,7 @@
             </p>
         </label>
         
-        <p class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-50" aria-label="Year Text">
+        <p class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-50" aria-label="Year Text" id="year-text">
             {@html yearsText[selectedYear - years[0]]}
         </p>
     </div>

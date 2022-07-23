@@ -12,6 +12,7 @@
 
 <head>
     <title>Kfir Fitousi | Front End Developer</title>
+    <meta name="description" content="My name is Kfir Fitousi and I'm a front end developer based in Israel.">
 </head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
