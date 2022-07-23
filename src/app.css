@@ -5,7 +5,7 @@
 
 @layer base {
     body {
-        @apply bg-zinc-300;
+        @apply bg-zinc-200;
         @apply dark:bg-zinc-800;
         font-family: 'Glory', sans-serif;
     }
