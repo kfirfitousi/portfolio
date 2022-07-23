@@ -19,7 +19,7 @@
         <DarkModeSwitch bind:theme />
     </div>
     <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
-    <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-300 dark:border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
+    <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-200 dark:border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
 
     <h1
         class="font-glory italic text-4xl text-zinc-800 dark:text-zinc-200 text-center mt-2"
