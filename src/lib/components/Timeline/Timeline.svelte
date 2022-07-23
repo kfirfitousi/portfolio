@@ -44,7 +44,7 @@
 />
 
 <section aria-label="Timeline">
-    <div bind:clientWidth={trackWidth} class="flex items-end w-full h-2 md:h-3 bg-gray-600 mx-auto rounded-t-lg select-none">
+    <div bind:clientWidth={trackWidth} class="flex items-end w-full h-2 md:h-3 bg-gray-500 dark:bg-zinc-500 mx-auto rounded-t-lg select-none">
         <button 
             class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-cover bg-no-repeat"
             style="background-image: url({ car })"
@@ -54,7 +54,6 @@
             aria-valuemax={years[years.length - 1]}
             aria-valuenow={selectedYear}
             aria-label="Racecar Slider"
-            aria-keyshortcuts="ArrowLeft ArrowRight"
             aria-controls="Year Text"
             bind:clientWidth={carWidth} 
             use:draggable={{
@@ -68,7 +67,7 @@
         />
     </div>
     
-    <div class="w-full bg-zinc-50 dark:bg-zinc-500 rounded-b-lg">
+    <div class="w-full bg-zinc-50 dark:bg-zinc-600 rounded-b-lg">
         <div 
             class="
                 w-16 md:w-20 mb-0.5 py-0.5 md:text-lg leading-5 md:leading-5 
@@ -83,12 +82,12 @@
         </div>
 
         <label for="slider">
-            <p class="text-sm text-center text-gray-600 dark:text-gray-300">
+            <p class="text-sm text-center text-zinc-800 dark:text-zinc-50">
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>
         
-        <p class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-100" aria-label="Year Text">
+        <p class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-50" aria-label="Year Text">
             {@html yearsText[selectedYear - years[0]]}
         </p>
     </div>

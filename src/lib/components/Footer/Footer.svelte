@@ -9,10 +9,10 @@
 		</div>
 		<span>
 			Source code available on
-			<a href="https://github.com/kp2c/portfolio" class="underline text-rose-700 dark:text-pink-600" target="_blank">GitHub</a>.
+			<a href="https://github.com/kp2c/portfolio" class="underline text-rose-800 dark:text-rose-400" target="_blank">GitHub</a>.
 		</span>
 		<span>
-			Icons by <a href="https://icons8.com" class="underline text-rose-700 dark:text-pink-600" target="_blank">Icons8</a>.
+			Icons by <a href="https://icons8.com" class="underline text-rose-800 dark:text-rose-400" target="_blank">Icons8</a>.
 		</span>
 	</div>
 </footer>
