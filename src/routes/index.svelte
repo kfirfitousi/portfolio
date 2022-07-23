@@ -19,7 +19,7 @@
     <div class="absolute">
         <DarkModeSwitch bind:theme />
     </div>
-    <img src="/kfir.jpg" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
+    <img src="/kfir.webp" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
     <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-200 dark:border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
 
     <h1
