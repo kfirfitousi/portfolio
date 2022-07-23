@@ -68,11 +68,11 @@
         />
     </div>
     
-    <div class="w-full bg-zinc-50 rounded-b-lg">
+    <div class="w-full bg-zinc-50 dark:bg-zinc-500 rounded-b-lg">
         <div 
             class="
                 w-16 md:w-20 mb-0.5 py-0.5 text-xs md:text-base leading-5 md:leading-5 
-                bg-pink-900 text-zinc-50 text-center select-none
+                bg-rose-700 dark:bg-pink-900 text-zinc-100 text-center select-none
             "
             class:rounded-bl-lg={offsetX !== 0}
             class:rounded-br-lg={offsetX !== trackWidth - carWidth}
@@ -83,12 +83,12 @@
         </div>
 
         <label for="slider">
-            <p class="text-sm text-center text-gray-600">
+            <p class="text-sm text-center text-gray-600 dark:text-gray-300">
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>
         
-        <p class="py-4 px-8 text-zinc-800" aria-label="Year Text">
+        <p class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-100" aria-label="Year Text">
             {@html yearsText[selectedYear - years[0]]}
         </p>
     </div>

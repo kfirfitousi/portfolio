@@ -16,7 +16,7 @@
     export let quote: string;
 </script>
 
-<p class="text-8xl text-center text-zinc-200 mt-10 mb-4">404</p>
+<p class="text-9xl text-center text-zinc-800 dark:text-zinc-200 mt-10 mb-4">404</p>
 {#if quote}
-<p class="text-xl text-center text-zinc-200">"{quote}"</p>
+<p class="text-xl italic text-center text-zinc-800 dark:text-zinc-200">"{quote}"</p>
 {/if}
