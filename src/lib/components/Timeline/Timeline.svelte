@@ -54,7 +54,7 @@
             aria-valuemax={years[years.length - 1]}
             aria-valuenow={selectedYear}
             aria-label="Racecar Slider"
-            aria-controls="yeat-text"
+            aria-controls="year-text"
             aria-keyshortcuts="ArrowLeft ArrowUp ArrowRight ArrowDown"
             bind:clientWidth={carWidth} 
             use:draggable={{
