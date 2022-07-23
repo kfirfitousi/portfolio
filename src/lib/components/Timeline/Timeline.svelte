@@ -12,7 +12,7 @@
 
     $: selectedYear = years[
         Math.min(
-            Math.max(Math.floor((offsetX + carWidth) / trackWidth * years.length) - 1, 0), 
+            Math.max(Math.ceil(offsetX / trackWidth * years.length), 0), 
             years.length - 1
         )
     ];
@@ -71,7 +71,7 @@
     <div class="w-full bg-zinc-50 dark:bg-zinc-500 rounded-b-lg">
         <div 
             class="
-                w-16 md:w-20 mb-0.5 py-0.5 text-xs md:text-base leading-5 md:leading-5 
+                w-16 md:w-20 mb-0.5 py-0.5 md:text-lg leading-5 md:leading-5 
                 bg-rose-700 dark:bg-pink-900 text-zinc-100 text-center select-none
             "
             class:rounded-bl-lg={offsetX !== 0}
