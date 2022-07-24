@@ -32,7 +32,7 @@
         <span>
             Source code available on
             <a
-                href="https://github.com/kp2c/portfolio"
+                href="https://github.com/kfirfitousi/portfolio"
                 class="underline text-rose-800 dark:text-rose-400"
                 target="_blank">GitHub</a
             >.

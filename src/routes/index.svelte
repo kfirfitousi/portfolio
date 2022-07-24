@@ -52,7 +52,7 @@
         />
         <IconWithTooltip
             tip="My profile on GitHub"
-            link="https://github.com/kp2c"
+            link="https://github.com/kfirfitousi"
             icon={GitHub}
             {theme}
         />
@@ -69,7 +69,7 @@
             summary="Built with TypeScript, Next.js and TailwindCSS."
             image="/pasta-quiz.webp"
             link="https://pasta-quiz.kfirfitousi.com"
-            github="https://github.com/kp2c/pasta-quiz"
+            github="https://github.com/kfirfitousi/pasta-quiz"
             lazyImage={false}
         />
         <ProjectCard
@@ -78,7 +78,7 @@
             summary="Built with TypeScript, SvelteKit and TailwindCSS."
             image="/while-compiler.webp"
             link="https://while.kfirfitousi.com"
-            github="https://github.com/kp2c/while-compiler"
+            github="https://github.com/kfirfitousi/while-compiler"
         />
         <ProjectCard
             title="Arous Elbahar Style"
