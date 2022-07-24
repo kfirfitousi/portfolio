@@ -28,18 +28,20 @@
             <p class="text-center mb-2">{summary}</p>
             <p class="flex flex-row mx-auto mb-2 sm:mb-0 space-x-2">
                 {#if link}
-                    <button
-                        class="w-16 text-lg hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                    <a
+                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                        href={link}
+                        target="_blank"
+                        alt={title}>Link</a
                     >
-                        <a href={link} target="_blank" alt={title}>Link</a>
-                    </button>
                 {/if}
                 {#if github}
-                    <button
-                        class="w-16 text-lg hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                    <a
+                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                        href={github}
+                        target="_blank"
+                        alt="{title} on GitHub">Code</a
                     >
-                        <a href={github} target="_blank" alt="{title} on GitHub">Code</a>
-                    </button>
                 {/if}
             </p>
         </div>
