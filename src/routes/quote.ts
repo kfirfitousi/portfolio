@@ -1,4 +1,4 @@
-import type { RequestHandler } from './__types/quote'
+import type { RequestHandler } from './__types/quote';
 
 type Output = {
     quote: string;
@@ -17,4 +17,4 @@ export const GET: RequestHandler<Output> = () => {
             quote: quotes[Math.floor(Math.random() * quotes.length)]
         }
     };
-}
+};

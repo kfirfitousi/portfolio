@@ -4,8 +4,8 @@
     type OutputProps = {
         quote: string;
     };
-    
-    export const load: Load<{},OutputProps> = async ({ fetch }) => {
+
+    export const load: Load<OutputProps> = async ({ fetch }) => {
         const response = await fetch('/quote');
         const { quote } = await response.json();
         return {
