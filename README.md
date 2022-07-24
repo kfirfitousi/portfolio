@@ -3,7 +3,7 @@
 ![GitHub deployments](https://img.shields.io/github/deployments/kp2c/portfolio/production?label=vercel&logo=vercel&style=for-the-badge)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/kp2c/portfolio/master?style=for-the-badge)
 
-Available on [kfirfitousi.com](https://wwww.kfirfitousi.com)
+Available on [kfirfitousi.com](https://www.kfirfitousi.com)
 
 ## Tech
 
