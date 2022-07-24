@@ -1,7 +1,11 @@
 <script context="module" lang="ts">
-    import type { Load } from '@sveltejs/kit';
+    import type { Load } from './__types/__error';
 
-    export const load: Load = async ({ fetch }) => {
+    type OutputProps = {
+        quote: string;
+    };
+    
+    export const load: Load<{},OutputProps> = async ({ fetch }) => {
         const response = await fetch('/quote');
         const { quote } = await response.json();
         return {
