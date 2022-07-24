@@ -3,7 +3,7 @@ import '/src/app.css';
 
 export default {
     title: 'Footer',
-    component: Footer,
+    component: Footer
 };
 
 export const Normal = () => ({

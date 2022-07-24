@@ -12,7 +12,10 @@
 
 <head>
     <title>Kfir Fitousi | Front End Developer</title>
-    <meta name="description" content="My name is Kfir Fitousi and I'm a front end developer based in Israel.">
+    <meta
+        name="description"
+        content="My name is Kfir Fitousi and I'm a front end developer based in Israel."
+    />
 </head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
@@ -20,48 +23,47 @@
         <DarkModeSwitch bind:theme />
     </div>
     <img src="/kfir.webp" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
-    <div class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-200 dark:border-x-zinc-800 border-b-[#3271aa] rounded-full"></div>
+    <div
+        class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-x-zinc-200 dark:border-x-zinc-800 border-b-[#3271aa] rounded-full"
+    />
 
     <h1
         class="font-glory italic text-4xl text-zinc-800 dark:text-zinc-200 text-center mt-2"
-        on:mouseover={() => showWave = true}
-        on:focus={() => showWave = true}
-        on:mouseout={() => showWave = false}
-        on:blur={() => showWave = false}
+        on:mouseover={() => (showWave = true)}
+        on:focus={() => (showWave = true)}
+        on:mouseout={() => (showWave = false)}
+        on:blur={() => (showWave = false)}
     >
         Kfir Fitousi
         {#if showWave}
             <span class="wave text-3xl absolute">&nbsp;&#128075;</span>
         {/if}
     </h1>
-    <h2 class="font-glory text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">Front End Developer</h2>
+    <h2 class="font-glory text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">
+        Front End Developer
+    </h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-12">
-        <IconWithTooltip 
+        <IconWithTooltip
             tip="My profile on LinkedIn"
             link="https://www.linkedin.com/in/kfirp"
             icon={LinkedIn}
-            theme={theme}
+            {theme}
         />
-        <IconWithTooltip 
+        <IconWithTooltip
             tip="My profile on GitHub"
             link="https://github.com/kp2c"
             icon={GitHub}
-            theme={theme}
+            {theme}
         />
-        <IconWithTooltip 
-            tip="My Email"
-            link="mailto:kfirp84@gmail.com"
-            icon={Email}
-            theme={theme}
-        />
+        <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} {theme} />
     </div>
 
-    <Timeline years={years} yearsText={yearsText} />
-    
+    <Timeline {years} {yearsText} />
+
     <section class="flex flex-wrap justify-center space-y-3 mt-12">
         <h1 class="text-3xl text-zinc-800 dark:text-zinc-200 text-center mb-1">Projects</h1>
-        <ProjectCard 
+        <ProjectCard
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
             summary="Built with TypeScript, Next.js and TailwindCSS."
@@ -70,15 +72,15 @@
             github="https://github.com/kp2c/pasta-quiz"
             lazyImage={false}
         />
-        <ProjectCard 
+        <ProjectCard
             title="WHILE Compiler"
             subtitle="Online interpreter and compiler for a programming language called WHILE."
             summary="Built with TypeScript, SvelteKit and TailwindCSS."
             image="/while-compiler.webp"
             link="https://while.kfirfitousi.com"
-            github="https://github.com/kp2c/while-compiler" 
+            github="https://github.com/kp2c/while-compiler"
         />
-        <ProjectCard 
+        <ProjectCard
             title="Arous Elbahar Style"
             subtitle="Second-hand store website for Arous Elbahar, a non-profit organization."
             summary="Built with Shopify. Not yet available."
@@ -105,13 +107,29 @@
     }
 
     @keyframes wave-animation {
-        0% { transform: rotate( 0.0deg) }
-        10% { transform: rotate(14.0deg) } 
-        20% { transform: rotate(-8.0deg) }
-        30% { transform: rotate(14.0deg) }
-        40% { transform: rotate(-4.0deg) }
-        50% { transform: rotate(10.0deg) }
-        60% { transform: rotate( 0.0deg) }
-        100% { transform: rotate( 0.0deg) }
+        0% {
+            transform: rotate(0deg);
+        }
+        10% {
+            transform: rotate(14deg);
+        }
+        20% {
+            transform: rotate(-8deg);
+        }
+        30% {
+            transform: rotate(14deg);
+        }
+        40% {
+            transform: rotate(-4deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        60% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 </style>

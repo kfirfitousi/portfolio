@@ -5,10 +5,10 @@ export default {
     title: 'Project Card',
     component: ProjectCard,
     args: {
-        title: "Example Project",
-        subtitle: "Example text",
-        summary: "Built with This, That and the Third.",
-        image: "static/pasta-quiz.webp"
+        title: 'Example Project',
+        subtitle: 'Example text',
+        summary: 'Built with This, That and the Third.',
+        image: 'static/pasta-quiz.webp'
     }
 };
 
@@ -21,6 +21,6 @@ export const WithoutLinks = Template.bind({});
 
 export const WithLinks = Template.bind({});
 WithLinks.args = {
-    link: "https://pasta-quiz.kfirfitousi.com",
-    github: "https://github.com/kp2c/pasta-quiz",
+    link: 'https://pasta-quiz.kfirfitousi.com',
+    github: 'https://github.com/kp2c/pasta-quiz'
 };

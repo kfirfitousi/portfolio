@@ -3,7 +3,7 @@ import { years, yearsText } from '/src/lib/data/timeline.json';
 import '/src/app.css';
 
 export default {
-    title: "Timeline",
+    title: 'Timeline',
     component: Timeline
 };
 
@@ -12,6 +12,6 @@ export const Default = () => ({
     props: {
         years,
         yearsText,
-        car: "static/car.webp"
+        car: 'static/car.webp'
     }
 });
