@@ -29,7 +29,7 @@
             <p class="flex flex-row mx-auto mb-2 sm:mb-0 space-x-2">
                 {#if link}
                     <a
-                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded hover:shadow-default"
                         href={link}
                         target="_blank"
                         alt={title}>Link</a
@@ -37,7 +37,7 @@
                 {/if}
                 {#if github}
                     <a
-                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded"
+                        class="w-16 text-lg text-center hover:bg-rose-700 dark:hover:bg-zinc-100 text-rose-700 dark:text-zinc-100 hover:text-zinc-100 dark:hover:text-zinc-700 border border-rose-700 dark:border-zinc-100 rounded hover:shadow-default"
                         href={github}
                         target="_blank"
                         alt="{title} on GitHub">Code</a
