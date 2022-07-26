@@ -44,7 +44,7 @@
     }}
 />
 
-<section aria-label="Timeline">
+<section class="rounded-lg shadow-default" aria-label="Timeline">
     <div
         bind:clientWidth={trackWidth}
         class="flex items-end w-full h-2 md:h-3 bg-gray-500 dark:bg-zinc-500 mx-auto rounded-t-lg select-none"
