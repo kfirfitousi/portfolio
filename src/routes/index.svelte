@@ -10,7 +10,7 @@
     let theme: string;
 </script>
 
-<head>
+<svelte:head>
     <title>Kfir Fitousi | Front End Developer</title>
     <meta
         name="description"
@@ -23,7 +23,7 @@
         content="typescript, javascript, react, svelte, frontend, front end, 
         developer, web developer, programmer, portfolio"
     />
-</head>
+</svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
     <div class="absolute">
