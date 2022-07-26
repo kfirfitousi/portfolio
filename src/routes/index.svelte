@@ -14,7 +14,14 @@
     <title>Kfir Fitousi | Front End Developer</title>
     <meta
         name="description"
-        content="My name is Kfir Fitousi and I'm a front end developer based in Israel."
+        content="I'm Kfir Fitousi, a front end developer based in Israel. 
+        I have experience with TypeScript, React, Svelte and more.
+        Here I'll be showcasing some of the projects I'm working on."
+    />
+    <meta
+        name="keyword"
+        content="typescript, javascript, react, svelte, frontend, front end, 
+        developer, web developer, programmer, portfolio"
     />
 </head>
 
