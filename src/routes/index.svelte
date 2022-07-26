@@ -35,7 +35,7 @@
     />
 
     <h1
-        class="font-glory italic text-4xl text-zinc-800 dark:text-zinc-200 text-center mt-2"
+        class="italic text-4xl text-zinc-800 dark:text-zinc-200 text-center mt-2"
         on:mouseover={() => (showWave = true)}
         on:focus={() => (showWave = true)}
         on:mouseout={() => (showWave = false)}
@@ -46,9 +46,7 @@
             <span class="wave text-3xl absolute">&nbsp;&#128075;</span>
         {/if}
     </h1>
-    <h2 class="font-glory text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">
-        Front End Developer
-    </h2>
+    <h2 class="text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">Front End Developer</h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-12">
         <IconWithTooltip
