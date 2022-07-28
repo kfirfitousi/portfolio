@@ -44,7 +44,12 @@
     use:draggable={{
         axis: 'both',
         position,
-        bounds: 'body',
+        bounds: {
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0
+        },
         onDrag: (e) => {
             x = e.offsetX;
             y = e.offsetY;
