@@ -76,6 +76,7 @@
             aria-keyshortcuts="ArrowLeft ArrowUp ArrowRight ArrowDown"
             bind:clientWidth={carWidth}
             on:mousedown|once={() => (preloadImages = true)}
+            on:touchstart|once={() => (preloadImages = true)}
             use:draggable={{
                 axis: 'x',
                 bounds: 'parent',
