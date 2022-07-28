@@ -5,8 +5,8 @@
     let trackWidth = 640;
     let carWidth = 80;
     let windowWidth: number;
+    let preloadImages = false;
 
-    export let car = '/car.webp';
     export let years: number[];
     export let yearsText: string[];
 
@@ -27,7 +27,21 @@
         offsetX = 0;
         windowWidth = windowWidth;
     }
+
+    $: {
+        trackWidth = trackWidth;
+        carWidth = carWidth;
+    }
+
 </script>
+
+<svelte:head>
+    {#if preloadImages}
+        {#each years as year}
+            <link rel="preload" href="/cars/{year}.webp" as="image" />
+        {/each}
+    {/if}
+</svelte:head>
 
 <svelte:window
     bind:innerWidth={windowWidth}
@@ -50,8 +64,8 @@
         class="flex items-end w-full h-2 md:h-3 bg-gray-500 dark:bg-zinc-500 mx-auto rounded-t-lg select-none"
     >
         <button
-            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-cover bg-no-repeat"
-            style="background-image: url({car})"
+            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-contain bg-coverx bg-no-repeat"
+            style="background-image: url(cars/{selectedYear}.webp)"
             id="slider"
             role="slider"
             aria-valuemin={years[0]}
@@ -61,6 +75,7 @@
             aria-controls="year-text"
             aria-keyshortcuts="ArrowLeft ArrowUp ArrowRight ArrowDown"
             bind:clientWidth={carWidth}
+            on:mousedown|once={() => (preloadImages = true)}
             use:draggable={{
                 axis: 'x',
                 bounds: 'parent',
