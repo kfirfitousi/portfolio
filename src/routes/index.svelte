@@ -47,7 +47,7 @@
     >
         Kfir Fitousi
         {#if showWave}
-            <span class="wave text-3xl absolute">&nbsp;&#128075;</span>
+            <span class="wave text-3xl absolute not-italic">&nbsp;&#128075;</span>
         {/if}
     </h1>
     <h2 class="text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">Front End Developer</h2>
