@@ -5,7 +5,6 @@
     let trackWidth = 640;
     let carWidth = 80;
     let windowWidth: number;
-    let preloadImages = false;
 
     export let years: number[];
     export let yearsText: string[];
@@ -18,6 +17,15 @@
             )
         ];
 
+    let preloadImages: Set<number> = new Set([years[0]]);
+
+    $: {
+        if (selectedYear + 1 <= years[years.length - 1]) {
+            preloadImages.add(selectedYear + 1);
+        }
+        selectedYear = selectedYear;
+    }
+
     $: position = {
         x: offsetX,
         y: 0
@@ -27,20 +35,12 @@
         offsetX = 0;
         windowWidth = windowWidth;
     }
-
-    $: {
-        trackWidth = trackWidth;
-        carWidth = carWidth;
-    }
-
 </script>
 
 <svelte:head>
-    {#if preloadImages}
-        {#each years as year}
-            <link rel="preload" href="/cars/{year}.webp" as="image" />
-        {/each}
-    {/if}
+    {#each Array.from(preloadImages) as image}
+        <link rel="preload" href="/cars/{image}.webp" as="image" />
+    {/each}
 </svelte:head>
 
 <svelte:window
@@ -75,8 +75,6 @@
             aria-controls="year-text"
             aria-keyshortcuts="ArrowLeft ArrowUp ArrowRight ArrowDown"
             bind:clientWidth={carWidth}
-            on:mousedown|once={() => (preloadImages = true)}
-            on:touchstart|once={() => (preloadImages = true)}
             use:draggable={{
                 axis: 'x',
                 bounds: 'parent',
