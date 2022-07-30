@@ -2,13 +2,14 @@
     import { onMount } from 'svelte';
     import { flip } from 'svelte/animate';
     import { fly, slide, crossfade } from 'svelte/transition';
+    import { cubicIn, cubicInOut, cubicOut } from 'svelte/easing';
     const [send, receive] = crossfade({});
 
     const themes = ['dark', 'light', 'bw'];
     const themeNames: { [key: string]: string } = {
-        dark: 'Dark Theme',
-        light: 'Light Theme',
-        bw: 'Black & White'
+        dark: 'Dark',
+        light: 'Light',
+        bw: 'Grayscale'
     };
 
     let activeThemes = ['dark'];
@@ -28,6 +29,13 @@
         localStorage.theme = theme;
         activeThemes = [theme];
     };
+
+    const debounce = () => {
+        debouncing = true;
+        setTimeout(() => {
+            debouncing = false;
+        }, 300);
+    };
 </script>
 
 <svelte:head>
@@ -40,37 +48,37 @@
 </svelte:head>
 
 <div
-    on:mouseover={() => {
-        if (debouncing || menuOpen) return;
+    on:mouseenter={() => {
+        if (debouncing) return;
+        debounce();
         menuOpen = true;
     }}
-    on:mouseleave={() => (menuOpen = false)}
+    on:mouseleave={() => {
+        if (debouncing) return;
+        debounce();
+        menuOpen = false;
+    }}
     on:focus={() => (menuOpen = true)}
     on:blur={() => (menuOpen = false)}
+    class="p-5 -m-5"
 >
     <div class="flex flex-col border border-primary rounded-[0.45rem]">
         {#each activeThemes as theme (theme)}
             <button
-                class="flex flex-row h-10 sm:h-6 {menuOpen ? 'w-24 sm:w-32' : 'w-10 sm:w-12'}"
-                style="transition: width 0.3s"
-                animate:flip={{ duration: 300 }}
-                in:receive={{ key: theme }}
-                out:send={{ key: theme }}
+                class="flex flex-row h-10 sm:h-7 {menuOpen ? 'w-20 sm:w-24' : 'w-10 sm:w-12'}"
+                style="transition: width 0.4s"
+                animate:flip={{ duration: 100 }}
+                in:receive={{ key: theme, duration: 400 }}
+                out:send={{ key: theme, duration: 400 }}
                 on:click={() => {
                     if (menuOpen) {
-                        debouncing = true;
-                        setTimeout(() => {
-                            debouncing = false;
-                        }, 300);
+                        debounce();
                     }
                     menuOpen = !menuOpen;
                 }}
                 on:touchstart|preventDefault={() => {
                     if (menuOpen) {
-                        debouncing = true;
-                        setTimeout(() => {
-                            debouncing = false;
-                        }, 300);
+                        debounce();
                     }
                     menuOpen = !menuOpen;
                 }}
@@ -78,59 +86,61 @@
                 <span
                     class="bg-primary w-6 
                         {menuOpen
-                        ? 'rounded-tl-md basis-3/4 sm:basis-5/6'
+                        ? 'rounded-tl-md basis-3/4 sm:basis-4/5'
                         : 'rounded-l-md basis-1/2'}"
+                    style="transition: all 0.4s"
                 >
                     {#if menuOpen}
                         <p
-                            class="text-xs sm:text-base leading-10 sm:leading-6 text-primary text-center select-none"
-                            in:fly={{ x: -10, duration: 500, opacity: 0 }}
+                            class="text-sm sm:text-base leading-10 sm:leading-7 text-primary text-center select-none"
+                            in:fly={{ x: -3, duration: 500, opacity: 0 }}
                         >
                             {themeNames[currentTheme]}
                         </p>
                     {/if}
                 </span>
                 <span
-                    class="text-accent-contrast text-center bg-accent 
+                    class="bg-accent 
                         {menuOpen
-                        ? 'rounded-tr-md basis-1/4 sm:basis-1/6'
+                        ? 'rounded-tr-md basis-1/4 sm:basis-1/5'
                         : 'rounded-r-md basis-1/2'}"
+                    style="transition: all 0.4s"
                 />
             </button>
         {/each}
 
         {#if menuOpen}
-            <div in:slide={{ duration: 400 }} out:slide={{ duration: 100 }}>
-                {#each inactiveThemes as theme, index (theme)}
-                    <div
-                        class={theme}
-                        animate:flip
-                        in:receive={{ key: theme }}
-                        out:send={{ key: theme }}
+            {#each inactiveThemes as theme, index (theme)}
+                {@const last = index === inactiveThemes.length - 1}
+                <div
+                    class={theme}
+                    animate:flip={{ duration: 100 }}
+                    in:receive={{ key: theme, duration: 400 }}
+                    out:send={{ key: theme, duration: 400 }}
+                >
+                    <button
+                        class="w-full h-10 sm:h-7 flex flex-row"
+                        on:click={() => selectTheme(theme)}
+                        transition:slide={{ duration: 400 }}
                     >
-                        <button
-                            class="w-full h-10 sm:h-6 flex flex-row"
-                            on:click={() => selectTheme(theme)}
+                        <span
+                            class="bg-primary w-6 basis-3/4 sm:basis-4/5 
+                                    {last ? 'rounded-bl-md' : ''}"
                         >
-                            <span
-                                class="bg-primary w-6 basis-3/4 sm:basis-5/6 
-                                {index === inactiveThemes.length - 1 ? 'rounded-bl-md' : ''}"
+                            <p
+                                class="text-sm sm:text-base leading-10 sm:leading-7 text-primary text-center"
+                                in:fly={{ x: -10, duration: 500, opacity: 0 }}
                             >
-                                <p
-                                    class="text-xs sm:text-base leading-10 sm:leading-6 text-primary text-center"
-                                    in:fly={{ x: -10, duration: 500, opacity: 0 }}
-                                >
-                                    {themeNames[theme]}
-                                </p>
-                            </span>
-                            <span
-                                class="text-accent-contrast bg-accent basis-1/4 sm:basis-1/6
-                                {index === inactiveThemes.length - 1 ? 'rounded-br-md' : ''}"
-                            />
-                        </button>
-                    </div>
-                {/each}
-            </div>
+                                {themeNames[theme]}
+                            </p>
+                        </span>
+                        <span
+                            class="text-accent-contrast bg-accent basis-1/4 sm:basis-1/5
+                                    {last ? 'rounded-br-md' : ''}"
+                        />
+                    </button>
+                </div>
+            {/each}
         {/if}
     </div>
 </div>
