@@ -101,7 +101,7 @@ const config = {
                             }
                         },
                         backgroundColor: {
-                            primary: '#E4E4E7',
+                            primary: '#F4F4F5',
                             secondary: '#D4D4D8',
                             track: '#71717A',
                             accent: {
@@ -120,7 +120,7 @@ const config = {
                             primary: '#A1A1AA'
                         },
                         borderColor: {
-                            bg: '#E4E4E7',
+                            bg: '#F4F4F5',
                             accent: {
                                 DEFAULT: '#18181B',
                                 contrast: '#F4F4F5'
