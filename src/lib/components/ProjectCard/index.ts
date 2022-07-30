@@ -1,1 +1,1 @@
-export { default as default } from './ProjectCard.svelte';
+export { default } from './ProjectCard.svelte';

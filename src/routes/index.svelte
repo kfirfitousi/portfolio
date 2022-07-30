@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DarkModeSwitch from '$lib/components/DarkModeSwitch';
+    import ThemeSwitcher from '$lib/components/ThemeSwitcher';
     import IconWithTooltip from '$lib/components/IconWithTooltip';
     import Timeline from '$lib/components/Timeline';
     import ProjectCard from '$lib/components/ProjectCard';
@@ -7,7 +7,6 @@
     import { years, yearsText } from '$lib/data/timeline.json';
 
     let showWave = false;
-    let theme: string;
 </script>
 
 <svelte:head>
@@ -26,20 +25,24 @@
 </svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
-    <div class="absolute">
-        <DarkModeSwitch bind:theme />
+    <div class="absolute z-10">
+        <ThemeSwitcher />
     </div>
 
-    <img src="/kfir.webp" alt="Kfir Fitousi" class="p-1 w-40 h-40 mx-auto rounded-full" />
+    <img
+        src="/kfir.webp"
+        alt="Kfir Fitousi"
+        class="p-1 w-40 h-40 mx-auto rounded-full bw:grayscale"
+    />
     <div
         class="
             pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
-            border-x-zinc-200 dark:border-x-zinc-800 rounded-full
+            border-x-bg rounded-full bw:grayscale
         "
     />
 
     <h1
-        class="italic text-4xl text-zinc-800 dark:text-zinc-200 text-center mt-2"
+        class="italic text-4xl text-primary text-center mt-2"
         on:mouseover={() => (showWave = true)}
         on:focus={() => (showWave = true)}
         on:mouseout={() => (showWave = false)}
@@ -47,31 +50,29 @@
     >
         Kfir Fitousi
         {#if showWave}
-            <span class="wave text-3xl absolute not-italic">&nbsp;&#128075;</span>
+            <span class="wave text-3xl absolute not-italic bw:grayscale">&nbsp;&#128075;</span>
         {/if}
     </h1>
-    <h2 class="text-xl text-zinc-800 dark:text-zinc-200 text-center mb-2">Front End Developer</h2>
+    <h2 class="text-xl text-primary text-center mb-2">Front End Developer</h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-12">
         <IconWithTooltip
             tip="My profile on LinkedIn"
             link="https://www.linkedin.com/in/kfirp"
             icon={LinkedIn}
-            {theme}
         />
         <IconWithTooltip
             tip="My profile on GitHub"
             link="https://github.com/kfirfitousi"
             icon={GitHub}
-            {theme}
         />
-        <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} {theme} />
+        <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} />
     </div>
 
     <Timeline {years} {yearsText} />
 
     <section class="flex flex-wrap justify-center space-y-3 mt-12">
-        <h1 class="text-3xl text-zinc-800 dark:text-zinc-200 text-center mb-1">Projects</h1>
+        <h1 class="text-3xl text-primary text-center mb-1">Projects</h1>
         <ProjectCard
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"

@@ -58,13 +58,13 @@
     }}
 />
 
-<section class="rounded-lg shadow-default" aria-label="Timeline">
+<section class="rounded-lg shadow-md shadow-primary" aria-label="Timeline">
     <div
         bind:clientWidth={trackWidth}
-        class="flex items-end w-full h-2 md:h-3 bg-gray-500 dark:bg-zinc-500 mx-auto rounded-t-lg select-none"
+        class="flex items-end w-full h-2 md:h-3 bg-track mx-auto rounded-t-lg select-none"
     >
         <button
-            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-contain bg-coverx bg-no-repeat"
+            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-contain bg-coverx bg-no-repeat bw:grayscale"
             style="background-image: url(cars/{selectedYear}.webp)"
             id="slider"
             role="slider"
@@ -86,11 +86,11 @@
         />
     </div>
 
-    <div class="w-full bg-zinc-50 dark:bg-zinc-600 rounded-b-lg">
+    <div class="w-full bg-secondary rounded-b-lg">
         <div
             class="
                 w-16 md:w-20 mb-0.5 py-0.5 md:text-lg leading-5 md:leading-5 
-                bg-rose-700 dark:bg-pink-900 text-zinc-100 text-center select-none
+                bg-accent text-accent-contrast text-center select-none
             "
             class:rounded-bl-lg={offsetX !== 0}
             class:rounded-br-lg={offsetX !== trackWidth - carWidth}
@@ -101,16 +101,12 @@
         </div>
 
         <label for="slider">
-            <p class="text-sm text-center text-zinc-800 dark:text-zinc-50">
+            <p class="text-sm text-center text-accent dark:text-light tracking-wide">
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>
 
-        <p
-            class="text-lg py-4 px-8 text-zinc-800 dark:text-zinc-50"
-            aria-label="Year Text"
-            id="year-text"
-        >
+        <p class="text-lg py-4 px-8 text-secondary" aria-label="Year Text" id="year-text">
             {@html yearsText[selectedYear - years[0]]}
         </p>
     </div>

@@ -1,6 +1,6 @@
 <svg
     viewBox="4.5 4.5 41.5 41.5"
-    class="w-7 h-7 fill-zinc-800 dark:fill-zinc-200 hover:fill-rose-700 hover:bg-rose-50 dark:hover:fill-pink-900 rounded shadow-default"
+    class="w-7 h-7 rounded fill-primary hover:fill-accent hover:bg-accent-contrast shadow-md shadow-primary"
 >
     <path
         style="stroke:none;fill-rule:nonzero;fill-opacity:1;"

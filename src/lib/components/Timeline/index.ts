@@ -1,1 +1,1 @@
-export { default as default } from './Timeline.svelte';
+export { default } from './Timeline.svelte';
