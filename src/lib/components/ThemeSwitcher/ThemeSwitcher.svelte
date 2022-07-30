@@ -50,13 +50,22 @@
 >
     <div class="flex flex-col border border-primary rounded-[0.45rem]">
         {#each activeThemes as theme (theme)}
-            <div
+            <button
                 class="flex flex-row h-10 sm:h-6 {menuOpen ? 'w-24 sm:w-32' : 'w-10 sm:w-12'}"
                 style="transition: width 0.3s"
                 animate:flip={{ duration: 300 }}
                 in:receive={{ key: theme }}
                 out:send={{ key: theme }}
                 on:click={() => {
+                    if (menuOpen) {
+                        debouncing = true;
+                        setTimeout(() => {
+                            debouncing = false;
+                        }, 300);
+                    }
+                    menuOpen = !menuOpen;
+                }}
+                on:touchstart|preventDefault={() => {
                     if (menuOpen) {
                         debouncing = true;
                         setTimeout(() => {
@@ -87,7 +96,7 @@
                         ? 'rounded-tr-md basis-1/4 sm:basis-1/6'
                         : 'rounded-r-md basis-1/2'}"
                 />
-            </div>
+            </button>
         {/each}
 
         {#if menuOpen}
