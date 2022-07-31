@@ -74,7 +74,7 @@
         {#each activeThemes as theme (theme)}
             <button
                 class="flex flex-row h-9 sm:h-7 {menuOpen ? 'w-20 sm:w-24' : 'w-14 sm:w-12'}"
-                style="transition: width 0.4s"
+                style="transition: width 0.3s"
                 animate:flip={{ duration: 400 }}
                 in:receive={{ key: theme, duration: 400 }}
                 out:send={{ key: theme, duration: 400 }}
@@ -89,27 +89,25 @@
                     debounce();
                 }}
             >
-                <span
-                    class="w-6
-                        {menuOpen
-                        ? 'rounded-tl-[0.83rem] basis-3/4 sm:basis-4/5'
-                        : 'rounded-l-full basis-1/2'}"
-                >
-                    {#if menuOpen}
+                {#if menuOpen}
+                    <span
+                        class="w-6 {menuOpen
+                            ? 'order-1 rounded-tl-[0.83rem] basis-3/4 sm:basis-4/5'
+                            : 'order-2 rounded-l-full basis-1/2'}"
+                    >
                         <p
                             class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center select-none"
                             in:fly={{ x: -3, duration: 200, delay: 100, opacity: 0 }}
                         >
                             {themeNames[currentTheme]}
                         </p>
-                    {/if}
-                </span>
+                    </span>
+                {/if}
                 <span
-                    class="bg-accent
-                        {menuOpen
-                        ? 'rounded-tr-[0.83rem] basis-1/4 h-9 sm:h-7 sm:basis-1/5'
-                        : 'rounded-full basis-1/2 h-7 sm:h-6 my-1 sm:my-0.5 mr-1 sm:mr-0.5'}"
-                    style="transition: border-radius 0.2s"
+                    class="bg-accent {menuOpen
+                        ? 'order-2 rounded-tr-[0.83rem] basis-1/4 h-9 sm:h-7 sm:basis-1/5'
+                        : 'order-1 rounded-full basis-1/2 h-7 sm:h-6 my-1 sm:my-0.5 ml-1 sm:ml-0.5'}"
+                    style="transition: border-radius step-start"
                 />
             </button>
         {/each}
