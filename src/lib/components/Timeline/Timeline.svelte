@@ -18,7 +18,6 @@
         ];
 
     let preloadImages = new Set<number>();
-    $:console.log(preloadImages)
     let loadedImages = [years[0]];
 
     $: {

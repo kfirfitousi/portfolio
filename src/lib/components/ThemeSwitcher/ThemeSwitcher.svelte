@@ -64,7 +64,7 @@
         menuOpen = false;
         debounce();
     }}
-    class="p-5 -m-5"
+    class="p-5 -m-5 select-none"
 >
     <div
         class="flex flex-col border border-accent dark:border-primary
