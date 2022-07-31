@@ -8,7 +8,7 @@
     export let lazyImage = true;
 </script>
 
-<article class="rounded-lg max-w-2xl shadow-md shadow-primary" aria-label={title}>
+<article class="rounded-lg max-w-2xl shadow-md sky:shadow-xl shadow-primary" aria-label={title}>
     <h1 class="text-xl h-10 leading-10 text-center bg-accent text-accent-contrast rounded-t-lg">
         {title}
     </h1>

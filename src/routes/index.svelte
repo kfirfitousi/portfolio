@@ -37,7 +37,7 @@
     <div
         class="
             pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
-            border-x-bg rounded-full bw:grayscale
+            border-x-transparent rounded-full bw:grayscale
         "
     />
 
