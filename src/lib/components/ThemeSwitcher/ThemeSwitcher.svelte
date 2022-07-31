@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { flip } from 'svelte/animate';
-    import { fade, fly, slide, crossfade } from 'svelte/transition';
+    import { fly, slide, crossfade } from 'svelte/transition';
     const [send, receive] = crossfade({});
 
     const themes = ['dark', 'light', 'bw', 'sky'] as const;
@@ -46,11 +46,9 @@
 <svelte:head>
     <script>
         if (!('theme' in localStorage)) {
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                localStorage.theme = 'dark';
-            } else {
-                localStorage.theme = 'light';
-            }
+            localStorage.theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
         }
         document.documentElement.className = localStorage.theme;
     </script>
