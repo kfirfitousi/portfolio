@@ -17,10 +17,12 @@
             )
         ];
 
-    let preloadImages: Set<number> = new Set([years[0]]);
+    let preloadImages = new Set<number>();
+    $:console.log(preloadImages)
+    let loadedImages = [years[0]];
 
     $: {
-        if (selectedYear + 1 <= years[years.length - 1]) {
+        if (preloadImages.has(selectedYear) && selectedYear + 1 <= years[years.length - 1]) {
             preloadImages.add(selectedYear + 1);
         }
         selectedYear = selectedYear;
@@ -39,7 +41,12 @@
 
 <svelte:head>
     {#each Array.from(preloadImages) as image}
-        <link rel="preload" href="/cars/{image}.webp" as="image" />
+        <link
+            rel="preload"
+            href="/cars/{image}.webp"
+            as="image"
+            on:load={() => (loadedImages = [...loadedImages, image])}
+        />
     {/each}
 </svelte:head>
 
@@ -58,14 +65,13 @@
     }}
 />
 
-<section class="rounded-lg shadow-md shadow-primary" aria-label="Timeline">
+<section class="rounded-lg shadow-md sky:shadow-xl shadow-primary" aria-label="Timeline">
     <div
         bind:clientWidth={trackWidth}
         class="flex items-end w-full h-2 md:h-3 bg-track mx-auto rounded-t-lg select-none"
     >
         <button
-            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 bg-contain bg-coverx bg-no-repeat bw:grayscale"
-            style="background-image: url(cars/{selectedYear}.webp)"
+            class="w-16 md:w-20 h-6 md:h-8 mb-0.5 md:mb-0 "
             id="slider"
             role="slider"
             aria-valuemin={years[0]}
@@ -83,7 +89,23 @@
                     offsetX = e.offsetX;
                 }
             }}
-        />
+            on:mouseover={() => {
+                preloadImages = preloadImages.add(years[0]);
+            }}
+            on:focus={() => preloadImages.add(years[0])}
+        >
+            {#if selectedYear in loadedImages}
+                <div
+                    class="w-full h-full bg-contain bg-no-repeat bw:grayscale"
+                    style="background-image: url(cars/{selectedYear}.webp)"
+                />
+            {:else}
+                <div
+                    class="w-full h-full bg-contain bg-no-repeat bw:grayscale"
+                    style="background-image: url(cars/{loadedImages[loadedImages.length - 1]}.webp)"
+                />
+            {/if}
+        </button>
     </div>
 
     <div class="w-full bg-secondary rounded-b-lg">
