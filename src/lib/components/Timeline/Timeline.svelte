@@ -91,6 +91,9 @@
             on:mouseover={() => {
                 preloadImages = preloadImages.add(years[0]);
             }}
+            on:touchstart={() => {
+                preloadImages = preloadImages.add(years[0]);
+            }}
             on:focus={() => preloadImages.add(years[0])}
         >
             {#if loadedImages.includes(selectedYear)}
