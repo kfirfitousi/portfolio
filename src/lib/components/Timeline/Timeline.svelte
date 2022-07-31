@@ -94,7 +94,7 @@
             }}
             on:focus={() => preloadImages.add(years[0])}
         >
-            {#if selectedYear in loadedImages}
+            {#if loadedImages.includes(selectedYear)}
                 <div
                     class="w-full h-full bg-contain bg-no-repeat bw:grayscale"
                     style="background-image: url(cars/{selectedYear}.webp)"
