@@ -46,7 +46,11 @@
 <svelte:head>
     <script>
         if (!('theme' in localStorage)) {
-            localStorage.theme = 'dark';
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
         }
         document.documentElement.className = localStorage.theme;
     </script>
