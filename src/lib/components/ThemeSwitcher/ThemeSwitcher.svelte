@@ -88,7 +88,7 @@
                 }}
             >
                 <span
-                    class="w-6 
+                    class="w-6
                         {menuOpen
                         ? 'rounded-tl-[0.83rem] basis-3/4 sm:basis-4/5'
                         : 'rounded-l-full basis-1/2'}"
@@ -105,8 +105,8 @@
                 <span
                     class="bg-accent
                         {menuOpen
-                        ? 'rounded-tr-[0.83rem] basis-1/4 sm:basis-1/5'
-                        : 'rounded-full basis-1/2 my-1 sm:my-0.5 mr-1 sm:mr-0.5'}"
+                        ? 'rounded-tr-[0.83rem] basis-1/4 h-9 sm:h-7 sm:basis-1/5'
+                        : 'rounded-full basis-1/2 h-7 sm:h-6 my-1 sm:my-0.5 mr-1 sm:mr-0.5'}"
                     style="transition: border-radius 0.2s"
                 />
             </button>
@@ -147,7 +147,7 @@
                             </p>
                         </span>
                         <span
-                            class="text-accent-contrast bg-accent basis-1/4 sm:basis-1/5 
+                            class="h-9 sm:h-7 text-accent-contrast bg-accent basis-1/4 sm:basis-1/5 
                                 {last ? 'rounded-br-[0.83rem]' : ''}"
                         />
                     </button>
