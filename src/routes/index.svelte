@@ -73,7 +73,7 @@
 
     <Timeline {years} {yearsText} />
 
-    <section class="flex flex-wrap justify-center space-y-3 mt-12">
+    <section class="flex flex-wrap justify-center space-y-5 mt-12">
         <h1 class="text-3xl text-primary text-center mb-1 neon:animate-neon-text">Projects</h1>
         <ProjectCard
             title="Pasta Quiz"

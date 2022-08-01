@@ -114,7 +114,7 @@
         <div
             class="
                 w-16 md:w-20 mb-0.5 py-0.5 md:text-lg leading-5 md:leading-5 
-                bg-accent neon:bg-teal-100 text-accent-contrast text-center select-none
+                bg-accent text-accent-contrast text-center select-none
             "
             class:rounded-bl-lg={offsetX !== 0}
             class:rounded-br-lg={offsetX !== trackWidth - carWidth}

@@ -180,12 +180,12 @@ const config = {
                     name: 'neon',
                     extend: {
                         colors: {
-                            primary: '#E4E4E7',
+                            primary: '#F0FDFA',
                             secondary: '#134E4A',
                             light: '#D4D4D8',
                             accent: {
                                 DEFAULT: '#99F6E4',
-                                contrast: '#115E59'
+                                contrast: '#134E4A'
                             }
                         },
                         backgroundColor: {
@@ -194,26 +194,26 @@ const config = {
                             track: '#99F6E4',
                             accent: {
                                 DEFAULT: '#99F6E4',
-                                contrast: '#115E59'
+                                contrast: '#134E4A'
                             }
                         },
                         backgroundImage: {
                             primary: 'none',
                         },
                         fill: {
-                            primary: '#E4E4E7',
+                            primary: '#F0FDFA',
                             accent: {
                                 DEFAULT: '#99F6E4',
-                                contrast: '#115E59'
+                                contrast: '#134E4A'
                             }
                         },
                         boxShadowColor: {
-                            primary: '#99F6E4'
+                            primary: '#115E59'
                         },
                         borderColor: {
                             accent: {
                                 DEFAULT: '#99F6E4',
-                                contrast: '#115E59'
+                                contrast: '#134E4A'
                             }
                         },
                         animation: {
