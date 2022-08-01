@@ -8,3 +8,82 @@
         font-family: 'Glory', sans-serif;
     }
 }
+
+@layer utilities {
+    @keyframes neon {
+        100% {
+            --webkit-filter: drop-shadow(0 0 4px #ccfbf1) drop-shadow(0 0 9px #14b8a6)
+                drop-shadow(0 0 10px #14b8a6);
+            filter: drop-shadow(0 0 4px #ccfbf1) drop-shadow(0 0 9px #14b8a6)
+                drop-shadow(0 0 10px #14b8a6);
+        }
+        0% {
+            --webkit-filter: drop-shadow(0 0 4px #ccfbf1) drop-shadow(0 0 8px #14b8a6)
+                drop-shadow(0 0 9px #14b8a6);
+            filter: drop-shadow(0 0 4px #ccfbf1) drop-shadow(0 0 8px #14b8a6)
+                drop-shadow(0 0 9px #14b8a6);
+        }
+    }
+
+    @keyframes neon-subtle {
+        100% {
+            --webkit-filter: drop-shadow(0 0 3px #ccfbf1) drop-shadow(0 0 6px #14b8a6)
+                drop-shadow(0 0 8px #14b8a6);
+            filter: drop-shadow(0 0 3px #ccfbf1) drop-shadow(0 0 6px #14b8a6)
+                drop-shadow(0 0 8px #14b8a6);
+        }
+        0% {
+            --webkit-filter: drop-shadow(0 0 3px #ccfbf1) drop-shadow(0 0 5px #14b8a6)
+                drop-shadow(0 0 7px #14b8a6);
+            filter: drop-shadow(0 0 3px #ccfbf1) drop-shadow(0 0 5px #14b8a6)
+                drop-shadow(0 0 7px #14b8a6);
+        }
+    }
+
+    @keyframes neon-text {
+        100% {
+            text-shadow: 0 0 4px #ccfbf1, 0 0 7px #ccfbf1, 0 0 15px #ccfbf1, 0 0 30px #14b8a6,
+                0 0 60px #14b8a6, 0 0 70px #14b8a6, 0 0 80px #14b8a6;
+        }
+        0% {
+            text-shadow: 0 0 4px #ccfbf1, 0 0 6px #ccfbf1, 0 0 10px #ccfbf1, 0 0 26px #14b8a6,
+                0 0 53px #14b8a6, 0 0 66px #14b8a6, 0 0 74px #14b8a6;
+        }
+    }
+
+    @keyframes neon-text-subtle {
+        100% {
+            text-shadow: 0 0 5px #ccfbf1, 0 0 8px #ccfbf1, 0 0 15px #ccfbf1, 0 0 30px #14b8a6;
+        }
+        0% {
+            text-shadow: 0 0 5px #ccfbf1, 0 0 7px #ccfbf1, 0 0 10px #ccfbf1, 0 0 26px #14b8a6;
+        }
+    }
+
+    @keyframes wave-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        10% {
+            transform: rotate(14deg);
+        }
+        20% {
+            transform: rotate(-8deg);
+        }
+        30% {
+            transform: rotate(14deg);
+        }
+        40% {
+            transform: rotate(-4deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        60% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}

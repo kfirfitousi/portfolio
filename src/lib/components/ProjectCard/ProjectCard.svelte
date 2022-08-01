@@ -8,8 +8,13 @@
     export let lazyImage = true;
 </script>
 
-<article class="rounded-lg max-w-2xl shadow-md sky:shadow-xl shadow-primary" aria-label={title}>
-    <h1 class="text-xl h-10 leading-10 text-center bg-accent text-accent-contrast rounded-t-lg">
+<article
+    class="rounded-lg max-w-2xl shadow-primary shadow-md sky:shadow-xl neon:shadow-none"
+    aria-label={title}
+>
+    <h1
+        class="text-xl h-10 leading-10 rounded-t-lg text-center bg-accent text-accent-contrast neon:text-secondary neon:animate-neon-subtle"
+    >
         {title}
     </h1>
     <div class="flex flex-col sm:flex-row">
@@ -28,7 +33,7 @@
                 {#if link}
                     <a
                         class="w-16 text-lg text-center text-secondary hover:text-accent-contrast hover:bg-accent 
-                            border border-secondary hover:border-accent rounded hover:shadow-md shadow-primary"
+                            border border-secondary hover:border-accent rounded shadow-primary hover:shadow-md"
                         href={link}
                         target="_blank"
                         alt={title}>Link</a
@@ -37,7 +42,7 @@
                 {#if github}
                     <a
                         class="w-16 text-lg text-center text-secondary hover:text-accent-contrast hover:bg-accent 
-                            border border-secondary hover:border-accent rounded hover:shadow-md shadow-primary"
+                            border border-secondary hover:border-accent rounded shadow-primary hover:shadow-md"
                         href={github}
                         target="_blank"
                         alt="{title} on GitHub">Code</a

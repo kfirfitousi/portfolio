@@ -4,7 +4,7 @@
     import { fly, slide, crossfade } from 'svelte/transition';
     const [send, receive] = crossfade({});
 
-    const themes = ['dark', 'light', 'bw', 'sky'] as const;
+    const themes = ['dark', 'light', 'bw', 'sky', 'neon'] as const;
 
     type Theme = typeof themes[number];
 
@@ -14,7 +14,8 @@
         dark: 'Dark',
         light: 'Light',
         bw: 'Grayscale',
-        sky: 'Sky Blue'
+        sky: 'Sky Blue',
+        neon: 'Neon'
     };
 
     let activeThemes: [Theme] = ['dark'];
@@ -96,8 +97,8 @@
                             : 'order-2 rounded-l-full basis-1/2'}"
                     >
                         <p
-                            class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center select-none"
-                            in:fly={{ x: -3, duration: 200, delay: 100, opacity: 0 }}
+                            class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center neon:animate-neon-text-subtle select-none"
+                            in:fly={{ x: -3, duration: 100, opacity: 0 }}
                         >
                             {themeNames[currentTheme]}
                         </p>
@@ -141,7 +142,8 @@
                                 {last ? 'rounded-bl-[0.83rem]' : ''}"
                         >
                             <p
-                                class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center"
+                                class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center select-none 
+                                    {theme === 'neon' ? 'neon:animate-neon-text-subtle' : ''}"
                             >
                                 {themeNames[theme]}
                             </p>

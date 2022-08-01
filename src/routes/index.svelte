@@ -42,7 +42,7 @@
     />
 
     <h1
-        class="italic text-4xl text-primary text-center mt-2"
+        class="italic text-4xl text-primary text-center mt-2 neon:animate-neon-text"
         on:mouseover={() => (showWave = true)}
         on:focus={() => (showWave = true)}
         on:mouseout={() => (showWave = false)}
@@ -50,10 +50,12 @@
     >
         Kfir Fitousi
         {#if showWave}
-            <span class="wave text-3xl absolute not-italic bw:grayscale">&nbsp;&#128075;</span>
+            <span class="animate-[wave-animation_infinite_2.5s] origin-[70%_70%] text-3xl absolute not-italic bw:grayscale" style="text-shadow: none;"
+                >&nbsp;&#128075;</span
+            >
         {/if}
     </h1>
-    <h2 class="text-xl text-primary text-center mb-2">Front End Developer</h2>
+    <h2 class="text-xl text-primary text-center mb-2 neon:animate-neon-text">Front End Developer</h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-12">
         <IconWithTooltip
@@ -72,7 +74,7 @@
     <Timeline {years} {yearsText} />
 
     <section class="flex flex-wrap justify-center space-y-3 mt-12">
-        <h1 class="text-3xl text-primary text-center mb-1">Projects</h1>
+        <h1 class="text-3xl text-primary text-center mb-1 neon:animate-neon-text">Projects</h1>
         <ProjectCard
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
@@ -109,37 +111,5 @@
     .pic-border:hover {
         transform: rotate(360deg);
         transition: ease-out 1s;
-    }
-
-    .wave {
-        animation: wave-animation infinite 2.5s;
-        transform-origin: 70% 70%;
-    }
-
-    @keyframes wave-animation {
-        0% {
-            transform: rotate(0deg);
-        }
-        10% {
-            transform: rotate(14deg);
-        }
-        20% {
-            transform: rotate(-8deg);
-        }
-        30% {
-            transform: rotate(14deg);
-        }
-        40% {
-            transform: rotate(-4deg);
-        }
-        50% {
-            transform: rotate(10deg);
-        }
-        60% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(0deg);
-        }
     }
 </style>

@@ -175,6 +175,54 @@ const config = {
                             }
                         }
                     }
+                },
+                {
+                    name: 'neon',
+                    extend: {
+                        colors: {
+                            primary: '#E4E4E7',
+                            secondary: '#134E4A',
+                            light: '#D4D4D8',
+                            accent: {
+                                DEFAULT: '#99F6E4',
+                                contrast: '#115E59'
+                            }
+                        },
+                        backgroundColor: {
+                            primary: '#27272A',
+                            secondary: '#2DD4BF',
+                            track: '#99F6E4',
+                            accent: {
+                                DEFAULT: '#99F6E4',
+                                contrast: '#115E59'
+                            }
+                        },
+                        backgroundImage: {
+                            primary: 'none',
+                        },
+                        fill: {
+                            primary: '#E4E4E7',
+                            accent: {
+                                DEFAULT: '#99F6E4',
+                                contrast: '#115E59'
+                            }
+                        },
+                        boxShadowColor: {
+                            primary: '#99F6E4'
+                        },
+                        borderColor: {
+                            accent: {
+                                DEFAULT: '#99F6E4',
+                                contrast: '#115E59'
+                            }
+                        },
+                        animation: {
+                            'neon': 'neon 10s infinite',
+                            'neon-subtle': 'neon-subtle 10s infinite',
+                            'neon-text': 'neon-text 10s ease-in-out infinite alternate',
+                            'neon-text-subtle': 'neon-text-subtle 10s ease-in-out infinite alternate'
+                        }
+                    }
                 }
             ]
         })
