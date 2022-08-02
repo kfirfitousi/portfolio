@@ -17,11 +17,6 @@
         I have experience with TypeScript, React, Svelte and more.
         Here I will showcase some of the things I'm working on."
     />
-    <meta
-        name="keyword"
-        content="typescript, javascript, react, svelte, frontend, front end, 
-        developer, web developer, programmer, portfolio"
-    />
 </svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
