@@ -125,7 +125,7 @@
         </div>
 
         <label for="slider">
-            <p class="text-sm text-center text-accent dark:text-light neon:text-secondary tracking-wide">
+            <p class="text-sm text-center text-accent dark:text-secondary neon:text-secondary tracking-wide">
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>

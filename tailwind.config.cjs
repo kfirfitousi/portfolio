@@ -98,7 +98,7 @@ const config = {
                         colors: {
                             primary: '#3F3F46',
                             secondary: '#18181B',
-                            light: '#71717A',
+                            light: '#52525B',
                             accent: {
                                 DEFAULT: '#18181B',
                                 contrast: '#F4F4F5'
@@ -140,7 +140,7 @@ const config = {
                         colors: {
                             primary: '#0C4A6E',
                             secondary: '#0C4A6E',
-                            light: '#0284C7',
+                            light: '#075985',
                             accent: {
                                 DEFAULT: '#0C4A6E',
                                 contrast: '#F0F9FF'
@@ -159,7 +159,7 @@ const config = {
                             primary: 'linear-gradient(to bottom, #FEF9C3 0%, #BAE6FD 50%)',
                         },
                         fill: {
-                            primary: '#075985',
+                            primary: '#0C4A6E',
                             accent: {
                                 DEFAULT: '#0C4A6E',
                                 contrast: '#F0F9FF'
@@ -180,7 +180,7 @@ const config = {
                     name: 'neon',
                     extend: {
                         colors: {
-                            primary: '#F0FDFA',
+                            primary: '#FFFFFF',
                             secondary: '#134E4A',
                             light: '#D4D4D8',
                             accent: {
