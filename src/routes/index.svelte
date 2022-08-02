@@ -33,7 +33,7 @@
     />
 
     <h1
-        class="flex flex-col justify-center space-x-2 sm:flex-row mt-2 
+        class="flex flex-col justify-center space-x-0 sm:space-x-2 sm:flex-row mt-2 
             italic text-4xl text-primary text-center neon:animate-neon-text neon:tracking-wider"
     >
         <span>Kfir Fitousi</span>
