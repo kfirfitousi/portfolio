@@ -19,22 +19,25 @@
     };
 
     let activeThemes: [Theme] = ['dark'];
-    $: inactiveThemes = themes.filter((theme) => !activeThemes.includes(theme));
+    let inactiveThemes: Theme[];
     $: currentTheme = activeThemes[0];
 
     let menuOpen = false;
     let debouncing = false;
+    let timeoutId: NodeJS.Timeout;
 
     let themeSwitcherElement: HTMLElement;
 
     onMount(() => {
         document.documentElement.className = localStorage.theme;
         activeThemes = [localStorage.theme];
+        inactiveThemes = themes.filter((theme) => localStorage.theme !== theme);
     });
 
     const selectTheme = (theme: Theme) => {
         document.documentElement.className = theme;
         localStorage.theme = theme;
+        inactiveThemes = [...inactiveThemes.filter((t: Theme) => t !== theme), currentTheme];
         activeThemes = [theme];
     };
 
@@ -69,13 +72,16 @@
 <div
     bind:this={themeSwitcherElement}
     on:mouseenter={() => {
+        clearTimeout(timeoutId);
         if (debouncing) return;
         menuOpen = true;
         debounce();
     }}
     on:mouseleave={() => {
-        menuOpen = false;
-        debounce();
+        timeoutId = setTimeout(() => {
+            menuOpen = false;
+            debounce();
+        }, 300);
     }}
     class="p-5 -m-5 select-none"
 >
@@ -90,7 +96,7 @@
                 style="transition: width 0.3s"
                 animate:flip={{ duration: 400 }}
                 in:receive={{ key: theme, duration: 400 }}
-                out:send={{ key: theme, duration: 400 }}
+                out:send={{ key: theme, duration: 0 }}
                 on:click={() => {
                     if (debouncing) return;
                     menuOpen = !menuOpen;
