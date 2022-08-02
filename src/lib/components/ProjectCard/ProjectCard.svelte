@@ -18,7 +18,7 @@
         {title}
     </h1>
     <div
-        class="flex flex-col sm:flex-row neon:border-x-[1.5rem] neon:border-b-[1.5rem] neon:border-t-[3rem] neon:border-accent neon:rounded-[2rem] neon:animate-neon-subtle"
+        class="flex flex-col sm:flex-row neon:border-x-[1.5rem] neon:border-b-[1.5rem] neon:border-t-[3rem] neon:border-accent neon:rounded-t-lg neon:rounded-b-lg neon:animate-neon-subtle"
     >
         <img
             src={image}
