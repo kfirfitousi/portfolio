@@ -111,7 +111,7 @@
                     >
                         <p
                             class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center neon:animate-neon-text-subtle select-none"
-                            in:fly={{ x: -3, duration: 100, opacity: 0 }}
+                            in:fly={{ x: 5, duration: 100, opacity: 0 }}
                         >
                             {themeNames[currentTheme]}
                         </p>
@@ -121,7 +121,7 @@
                     class="bg-accent {menuOpen
                         ? 'order-2 rounded-tr-[0.83rem] basis-1/4 h-9 sm:h-7 sm:basis-1/5'
                         : 'order-1 rounded-full basis-1/2 h-7 sm:h-6 my-1 sm:my-0.5 ml-1 sm:ml-0.5'}"
-                    style="transition: border-radius step-start"
+                    style="transition: border-radius 0.4s"
                 />
             </button>
         {/each}
@@ -148,7 +148,7 @@
                             debounce();
                         }}
                         in:slide={{ duration: 200, delay: 200 }}
-                        out:slide={{ duration: 200, delay: 100 }}
+                        out:slide={{ duration: 100, delay: 200 }}
                     >
                         <span
                             class="bg-primary w-6 basis-3/4 sm:basis-4/5 

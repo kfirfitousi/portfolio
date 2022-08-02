@@ -18,44 +18,48 @@
 </svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
-    <div class="absolute z-10">
+    <div class="w-fit h-0 ml-auto z-10">
         <ThemeSwitcher />
     </div>
 
-    <img
-        src="/kfir.webp"
-        alt="Kfir Fitousi"
-        class="p-1 w-40 h-40 mx-auto rounded-full bw:grayscale"
-    />
-    <div
-        class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
-            border-x-transparent rounded-full bw:grayscale"
-    />
-
-    <h1
-        class="flex flex-col justify-center space-x-0 sm:space-x-2 sm:flex-row mt-2 
-            italic text-4xl text-primary text-center neon:animate-neon-text neon:tracking-wider"
-    >
-        <span>Kfir Fitousi</span>
-        <span>כפיר פיטוסי</span>
-    </h1>
-    <h2 class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest">
-        Front End Developer
-    </h2>
-
-    <div class="flex flex-row justify-center space-x-3 mb-12">
-        <IconWithTooltip
-            tip="My profile on LinkedIn"
-            link="https://www.linkedin.com/in/kfirp"
-            icon={LinkedIn}
+    <section class="mt-5">
+        <img
+            src="/kfir.webp"
+            alt="Kfir Fitousi"
+            class="p-1 w-40 h-40 mx-auto rounded-full bw:grayscale"
         />
-        <IconWithTooltip
-            tip="My profile on GitHub"
-            link="https://github.com/kfirfitousi"
-            icon={GitHub}
+        <div
+            class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
+                border-x-transparent rounded-full bw:grayscale"
         />
-        <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} />
-    </div>
+
+        <h1
+            class="flex flex-col justify-center space-x-0 sm:space-x-2 sm:flex-row mt-2 
+                italic text-4xl text-primary text-center neon:animate-neon-text neon:tracking-wider"
+        >
+            <span>Kfir Fitousi</span>
+            <span>כפיר פיטוסי</span>
+        </h1>
+        <h2
+            class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest"
+        >
+            Front End Developer
+        </h2>
+
+        <div class="flex flex-row justify-center space-x-3 mb-12">
+            <IconWithTooltip
+                tip="My profile on LinkedIn"
+                link="https://www.linkedin.com/in/kfirp"
+                icon={LinkedIn}
+            />
+            <IconWithTooltip
+                tip="My profile on GitHub"
+                link="https://github.com/kfirfitousi"
+                icon={GitHub}
+            />
+            <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} />
+        </div>
+    </section>
 
     <Timeline {years} {yearsText} />
 
