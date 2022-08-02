@@ -25,6 +25,8 @@
     let menuOpen = false;
     let debouncing = false;
 
+    let themeSwitcherElement: HTMLElement;
+
     onMount(() => {
         document.documentElement.className = localStorage.theme;
         activeThemes = [localStorage.theme];
@@ -42,7 +44,16 @@
             debouncing = false;
         }, 400);
     };
+
+    const touchHandler = (e: TouchEvent) => {
+        if (!themeSwitcherElement.contains(e.target as HTMLElement)) {
+            menuOpen = false;
+            debounce();
+        }
+    };
 </script>
+
+<svelte:window on:touchstart={touchHandler} />
 
 <svelte:head>
     <script>
@@ -56,6 +67,7 @@
 </svelte:head>
 
 <div
+    bind:this={themeSwitcherElement}
     on:mouseenter={() => {
         if (debouncing) return;
         menuOpen = true;
