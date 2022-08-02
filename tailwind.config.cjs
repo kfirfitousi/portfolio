@@ -156,7 +156,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'linear-gradient(to bottom, #FEF9C3 0%, #BAE6FD 90%), linear-gradient(to bottom, #BAE6FD 0%, #FEF9C3 90%) ',
+                            primary: 'linear-gradient(to bottom, #FEF9C3 0%, #BAE6FD 50%)',
                         },
                         fill: {
                             primary: '#075985',
