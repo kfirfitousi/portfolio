@@ -37,20 +37,24 @@
     />
 
     <h1
-        class="italic text-4xl text-primary text-center mt-2 neon:animate-neon-text neon:tracking-wider"
+        class="flex flex-col justify-center space-x-2 sm:flex-row italic text-4xl text-primary text-center mt-2 neon:animate-neon-text neon:tracking-wider"
         on:mouseover={() => (showWave = true)}
         on:focus={() => (showWave = true)}
         on:mouseout={() => (showWave = false)}
         on:blur={() => (showWave = false)}
     >
-        Kfir Fitousi
+        <span>Kfir Fitousi</span>
+        <span>כפיר פיטוסי</span>
         {#if showWave}
-            <span class="animate-[wave-animation_infinite_2.5s] origin-[70%_70%] text-3xl absolute not-italic bw:grayscale" style="text-shadow: none;"
-                >&nbsp;&#128075;</span
+            <span
+                class="animate-[wave-animation_infinite_2.5s] origin-[70%_70%] text-3xl absolute not-italic bw:grayscale"
+                style="text-shadow: none;">&nbsp;&nbsp;&#128075;</span
             >
         {/if}
     </h1>
-    <h2 class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest">Front End Developer</h2>
+    <h2 class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest">
+        Front End Developer
+    </h2>
 
     <div class="flex flex-row justify-center space-x-3 mb-12">
         <IconWithTooltip
@@ -69,7 +73,11 @@
     <Timeline {years} {yearsText} />
 
     <section class="flex flex-wrap justify-center space-y-5 mt-12">
-        <h1 class="text-3xl text-primary text-center mb-1 neon:animate-neon-text neon:tracking-wider">Projects</h1>
+        <h1
+            class="text-3xl text-primary text-center mb-1 neon:animate-neon-text neon:tracking-wider"
+        >
+            Projects
+        </h1>
         <ProjectCard
             title="Pasta Quiz"
             subtitle="Put your pasta knowledge to the test!"
