@@ -90,6 +90,7 @@
                     debounce();
                 }}
             >
+                <label for="button" class="sr-only">Theme Switcher</label>
                 {#if menuOpen}
                     <span
                         class="w-6 {menuOpen
@@ -110,7 +111,6 @@
                         : 'order-1 rounded-full basis-1/2 h-7 sm:h-6 my-1 sm:my-0.5 ml-1 sm:ml-0.5'}"
                     style="transition: border-radius step-start"
                 />
-                <span class="sr-only">Theme Switcher</span>
             </button>
         {/each}
 
