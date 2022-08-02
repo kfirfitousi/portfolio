@@ -5,8 +5,6 @@
     import ProjectCard from '$lib/components/ProjectCard';
     import { LinkedIn, GitHub, Email } from '$lib/components/Icons';
     import { years, yearsText } from '$lib/data/timeline.json';
-
-    let showWave = false;
 </script>
 
 <svelte:head>
@@ -30,27 +28,16 @@
         class="p-1 w-40 h-40 mx-auto rounded-full bw:grayscale"
     />
     <div
-        class="
-            pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
-            border-x-transparent rounded-full bw:grayscale
-        "
+        class="pic-border w-40 h-40 border-2 border-t-[#d27884] border-b-[#3271aa] 
+            border-x-transparent rounded-full bw:grayscale"
     />
 
     <h1
-        class="flex flex-col justify-center space-x-2 sm:flex-row italic text-4xl text-primary text-center mt-2 neon:animate-neon-text neon:tracking-wider"
-        on:mouseover={() => (showWave = true)}
-        on:focus={() => (showWave = true)}
-        on:mouseout={() => (showWave = false)}
-        on:blur={() => (showWave = false)}
+        class="flex flex-col justify-center space-x-2 sm:flex-row mt-2 
+            italic text-4xl text-primary text-center neon:animate-neon-text neon:tracking-wider"
     >
         <span>Kfir Fitousi</span>
         <span>כפיר פיטוסי</span>
-        {#if showWave}
-            <span
-                class="animate-[wave-animation_infinite_2.5s] origin-[70%_70%] text-3xl absolute not-italic bw:grayscale"
-                style="text-shadow: none;">&nbsp;&nbsp;&#128075;</span
-            >
-        {/if}
     </h1>
     <h2 class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest">
         Front End Developer

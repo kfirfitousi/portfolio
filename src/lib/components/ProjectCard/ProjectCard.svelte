@@ -44,7 +44,7 @@
                 {#if github}
                     <a
                         class="w-16 text-lg text-center text-secondary hover:text-accent-contrast neon:hover:text-accent hover:bg-accent neon:hover:bg-accent-contrast
-                        border border-secondary hover:border-accent rounded shadow-primary hover:shadow-md"
+                            border border-secondary hover:border-accent rounded shadow-primary hover:shadow-md"
                         href={github}
                         target="_blank"
                         alt="{title} on GitHub">Code</a

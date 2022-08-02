@@ -64,7 +64,10 @@
     }}
 />
 
-<section class="rounded-lg shadow-md sky:shadow-xl neon:shadow-none shadow-primary" aria-label="Timeline">
+<section
+    class="rounded-lg shadow-md sky:shadow-xl neon:shadow-none shadow-primary"
+    aria-label="Timeline"
+>
     <div
         bind:clientWidth={trackWidth}
         class="flex items-end w-full h-2 md:h-3 bg-track mx-auto rounded-t-lg select-none neon:animate-neon"
@@ -125,7 +128,9 @@
         </div>
 
         <label for="slider">
-            <p class="text-sm text-center text-accent dark:text-secondary neon:text-secondary tracking-wide">
+            <p
+                class="text-sm text-center text-accent dark:text-secondary neon:text-secondary tracking-wide"
+            >
                 Drag the racecar across the track to progress through the timeline
             </p>
         </label>

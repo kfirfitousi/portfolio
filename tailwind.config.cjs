@@ -30,7 +30,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'none',
+                            primary: 'none'
                         },
                         fill: {
                             primary: '#E4E4E7',
@@ -72,7 +72,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'none',
+                            primary: 'none'
                         },
                         fill: {
                             primary: '#27272A',
@@ -114,7 +114,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'none',
+                            primary: 'none'
                         },
                         fill: {
                             primary: '#3F3F46',
@@ -156,7 +156,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'linear-gradient(to bottom, #FEF9C3 0%, #BAE6FD 50%)',
+                            primary: 'linear-gradient(to bottom, #FEF9C3 0%, #BAE6FD 50%)'
                         },
                         fill: {
                             primary: '#0C4A6E',
@@ -198,7 +198,7 @@ const config = {
                             }
                         },
                         backgroundImage: {
-                            primary: 'none',
+                            primary: 'none'
                         },
                         fill: {
                             primary: '#F0FDFA',
@@ -217,10 +217,11 @@ const config = {
                             }
                         },
                         animation: {
-                            'neon': 'neon 10s infinite',
+                            neon: 'neon 10s infinite',
                             'neon-subtle': 'neon-subtle 10s infinite',
                             'neon-text': 'neon-text 10s ease-in-out infinite alternate',
-                            'neon-text-subtle': 'neon-text-subtle 10s ease-in-out infinite alternate'
+                            'neon-text-subtle':
+                                'neon-text-subtle 10s ease-in-out infinite alternate'
                         }
                     }
                 }

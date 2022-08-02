@@ -144,7 +144,7 @@
                         >
                             <p
                                 class="text-sm sm:text-base leading-9 sm:leading-7 text-primary text-center select-none 
-                                    {theme === 'neon' ? 'neon:animate-neon-text-subtle' : ''}"
+                                    {theme === 'neon' ? 'animate-neon-text-subtle' : ''}"
                             >
                                 {themeNames[theme]}
                             </p>
