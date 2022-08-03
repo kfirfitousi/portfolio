@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-    import type { Load } from './__types/__error';
+    import type { Load } from './__types';
 
     type OutputProps = {
         quote: string;
@@ -27,7 +27,7 @@
 </svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">
-    <div class="absolute inset-y-6">
+    <div class="w-fit h-0 ml-auto z-10">
         <ThemeSwitcher />
     </div>
 
