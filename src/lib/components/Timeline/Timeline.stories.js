@@ -11,7 +11,6 @@ export const Default = () => ({
     Component: Timeline,
     props: {
         years,
-        yearsText,
-        car: 'static/car.webp'
+        yearsText
     }
 });

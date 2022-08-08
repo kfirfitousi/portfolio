@@ -1,13 +1,16 @@
 <script lang="ts">
     import { draggable } from '@neodrag/svelte';
 
+    export let years: number[];
+    export let yearsText: string[];
+
     let offsetX = 0;
     let trackWidth = 640;
     let carWidth = 80;
     let windowWidth: number;
 
-    export let years: number[];
-    export let yearsText: string[];
+    let preloadImages = new Set<number>();
+    let loadedImages = [years[0]];
 
     $: selectedYear =
         years[
@@ -16,9 +19,6 @@
                 years.length - 1
             )
         ];
-
-    let preloadImages = new Set<number>();
-    let loadedImages = [years[0]];
 
     $: {
         if (preloadImages.has(selectedYear) && selectedYear + 1 <= years[years.length - 1]) {
