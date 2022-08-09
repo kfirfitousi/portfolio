@@ -83,7 +83,7 @@
             debounce();
         }, 300);
     }}
-    class="p-5 -m-5 select-none max-w-fit"
+    class="p-5 -m-5 select-none"
 >
     <div
         class="flex flex-col border border-accent dark:border-primary
