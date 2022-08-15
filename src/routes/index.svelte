@@ -57,7 +57,7 @@
                 link="https://github.com/kfirfitousi"
                 icon={GitHub}
             />
-            <IconWithTooltip tip="My Email" link="mailto:kfirp84@gmail.com" icon={Email} />
+            <IconWithTooltip tip="My Email" link="mailto:kfirfitousi@gmail.com" icon={Email} />
         </div>
     </section>
 
