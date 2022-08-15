@@ -74,7 +74,7 @@
             subtitle="Put your pasta knowledge to the test!"
             summary="Built with TypeScript, Next.js and TailwindCSS."
             image="/pasta-quiz.webp"
-            link="https://pasta-quiz.kfirfitousi.com"
+            link="https://pasta.kfirfitousi.com"
             github="https://github.com/kfirfitousi/pasta-quiz"
             lazyImage={false}
         />
