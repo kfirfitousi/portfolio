@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-    <title>Kfir Fitousi | Front End Developer</title>
+    <title>Kfir Fitousi | Full Stack Developer</title>
 </svelte:head>
 
 <main class="conatiner max-w-2xl mx-auto px-4">

@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-    <title>Kfir Fitousi | Front End Developer</title>
+    <title>Kfir Fitousi | Full Stack Developer</title>
     <meta
         name="description"
         content="I'm Kfir Fitousi, a Full Stack Developer. 
