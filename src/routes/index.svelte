@@ -11,8 +11,8 @@
     <title>Kfir Fitousi | Front End Developer</title>
     <meta
         name="description"
-        content="I'm Kfir Fitousi, a front end developer. 
-        I have experience with TypeScript, React, Svelte and more.
+        content="I'm Kfir Fitousi, a Full Stack Developer. 
+        I have experience with TypeScript, React, Next.js and more.
         Here I will showcase some of the things I'm working on."
     />
 </svelte:head>
@@ -43,7 +43,7 @@
         <h2
             class="text-xl text-primary text-center mb-2 neon:animate-neon-text neon:tracking-widest"
         >
-            Front End Developer
+            Full Stack Developer
         </h2>
 
         <div class="flex flex-row justify-center space-x-3 mb-12">
@@ -70,27 +70,36 @@
             Projects
         </h1>
         <ProjectCard
-            title="Pasta Quiz"
-            subtitle="Put your pasta knowledge to the test!"
-            summary="Built with TypeScript, Next.js and TailwindCSS."
-            image="/pasta-quiz.webp"
-            link="https://pasta.kfirfitousi.com"
-            github="https://github.com/kfirfitousi/pasta-quiz"
+            title="Kfir's Blog"
+            subtitle="Blog app built using Next.js 13's new features"
+            summary="Includes mdx support, syntax-highlighting, dark mode and more. Built with React, TypeScript, Next.js, Zustand, next-mdx-remote and TailwindCSS"
+            image="/blog.webp"
+            link="https://blog.kfirfitousi.com"
+            github="https://github.com/kfirfitousi/blog"
             lazyImage={false}
         />
         <ProjectCard
+            title="Pasta Quiz"
+            subtitle="Pasta shape quiz app"
+            summary="Built with React, TypeScript, Next.js, Supabase and TailwindCSS"
+            image="/pasta-quiz.webp"
+            link="https://pasta.kfirfitousi.com"
+            github="https://github.com/kfirfitousi/pasta-quiz"
+        />
+        <ProjectCard
             title="WHILE Compiler"
-            subtitle="Online interpreter and compiler for a programming language called WHILE."
-            summary="Built with TypeScript, SvelteKit and TailwindCSS."
+            subtitle="Online interpreter and compiler for a programming language called WHILE"
+            summary="Built with TypeScript, SvelteKit and TailwindCSS"
             image="/while-compiler.webp"
             link="https://while.kfirfitousi.com"
             github="https://github.com/kfirfitousi/while-compiler"
         />
         <ProjectCard
-            title="Arous Elbahar Style"
-            subtitle="Second-hand store website for Arous Elbahar, a non-profit organization."
-            summary="Built with Shopify. Not yet available."
+            title="Buy in Style"
+            subtitle="Online catalog for Arous Elbahar's second-hand store"
+            summary="Built with React, Next.js, TypeScript, React Query, TailwindCSS and Contentful CMS"
             image="/arous-style.webp"
+            github="https://github.com/kfirfitousi/arous-style"
         />
     </section>
 </main>
